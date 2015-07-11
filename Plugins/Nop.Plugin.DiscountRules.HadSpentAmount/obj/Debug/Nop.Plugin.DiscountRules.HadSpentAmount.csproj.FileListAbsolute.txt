@@ -8,3 +8,13 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpent
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.pdb
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Views\DiscountRulesHadSpentAmount\Configure.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Description.txt
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\web.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\logo.jpg
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.dll.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.dll
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.pdb
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.csprojResolveAssemblyReference.cache
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.dll
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.pdb

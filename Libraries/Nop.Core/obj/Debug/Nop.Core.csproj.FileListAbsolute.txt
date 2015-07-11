@@ -18,7 +18,6 @@ C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\bin\Debug\System.Web.Razor.xml
 C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\bin\Debug\System.Web.WebPages.xml
 C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\bin\Debug\System.Web.WebPages.Razor.xml
-C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\obj\Debug\Nop.Core.csprojResolveAssemblyReference.cache
 C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\obj\Debug\Nop.Core.dll
 C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\obj\Debug\Nop.Core.pdb
 E:\GitHub\NakeDearThorganics\Libraries\Nop.Core\bin\Debug\Nop.Core.dll.config
@@ -43,3 +42,4 @@ E:\GitHub\NakeDearThorganics\Libraries\Nop.Core\bin\Debug\System.Web.WebPages.De
 E:\GitHub\NakeDearThorganics\Libraries\Nop.Core\bin\Debug\System.Web.WebPages.Razor.xml
 E:\GitHub\NakeDearThorganics\Libraries\Nop.Core\obj\Debug\Nop.Core.dll
 E:\GitHub\NakeDearThorganics\Libraries\Nop.Core\obj\Debug\Nop.Core.pdb
+C:\GitHub\NakeDearThorganics\Libraries\Nop.Core\obj\Debug\Nop.Core.csprojResolveAssemblyReference.cache

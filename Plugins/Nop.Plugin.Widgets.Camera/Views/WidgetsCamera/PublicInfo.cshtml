@@ -11,26 +11,25 @@
 {
     if (!string.IsNullOrEmpty(pictureUrl))
     {
-        if (!string.IsNullOrEmpty(link))
-        {
-            <a href="@link">
-                <img src="@pictureUrl" data-thumb="@pictureUrl" data-transition="@dataTransition" alt="" title="@text" />
-            </a>
-            <div title="slide-3" data-thumb="@pictureUrl" data-link="@link" data-src="@pictureUrl">
-                <div class="camera_caption fadeIn">
-                    @Html.Raw(@text)
-                </div>
+        <div data-thumb="@pictureUrl" @(string.IsNullOrWhiteSpace(link) ? "" : "data-link='" + link + "'") data-src="@pictureUrl">
+            <div class="camera_caption fadeIn">
+                @Html.Raw(@text)
             </div>
-        }
-        else
-        {
-            @*<img src="@pictureUrl" data-thumb="@pictureUrl" data-transition="@dataTransition" alt="" title="@text" />*@
-        }
+        </div>
     }
 }
 <div class="header-modules">
+    
+    <div class="fluid_container">
+        <div id="camera_wrap_1">
+            @RenderSliderLine(Model.Picture1Url, Model.Text1, Model.Link1)
+            @RenderSliderLine(Model.Picture2Url, Model.Text2, Model.Link2)
+            @RenderSliderLine(Model.Picture3Url, Model.Text3, Model.Link3)
+            @RenderSliderLine(Model.Picture4Url, Model.Text4, Model.Link4)
+            @RenderSliderLine(Model.Picture5Url, Model.Text5, Model.Link5)
+        </div>
+    </div>
     <script>
-    $(function () {
         $('#camera_wrap_1').camera({
             navigation: true,
             playPause: false,
@@ -57,16 +56,6 @@
             loaderPadding: 0,
             loaderStroke: 3
         });
-    });
     </script>
-    <div class="fluid_container">
-        <div id="camera_wrap_1">
-            @RenderSliderLine(Model.Picture1Url, Model.Text1, Model.Link1)
-            @RenderSliderLine(Model.Picture2Url, Model.Text2, Model.Link2)
-            @RenderSliderLine(Model.Picture3Url, Model.Text3, Model.Link3)
-            @RenderSliderLine(Model.Picture4Url, Model.Text4, Model.Link4)
-            @RenderSliderLine(Model.Picture5Url, Model.Text5, Model.Link5)
-        </div>
-    </div>
 </div>
 

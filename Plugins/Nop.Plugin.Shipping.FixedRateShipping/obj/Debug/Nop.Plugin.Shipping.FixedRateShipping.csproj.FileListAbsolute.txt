@@ -8,3 +8,13 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShip
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.pdb
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Views\ShippingFixedRate\Configure.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Description.txt
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\web.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\logo.jpg
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Nop.Plugin.Shipping.FixedRateShipping.dll.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Nop.Plugin.Shipping.FixedRateShipping.dll
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Nop.Plugin.Shipping.FixedRateShipping.pdb
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.csprojResolveAssemblyReference.cache
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.dll
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.pdb

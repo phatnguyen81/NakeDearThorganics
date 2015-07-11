@@ -11,3 +11,16 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb

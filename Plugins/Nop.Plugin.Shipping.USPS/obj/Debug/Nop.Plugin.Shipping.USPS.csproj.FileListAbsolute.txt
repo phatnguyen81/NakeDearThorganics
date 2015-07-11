@@ -8,3 +8,13 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\Nop.Plug
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.pdb
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\Views\ShippingUSPS\Configure.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\web.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\Description.txt
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\logo.jpg
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\Nop.Plugin.Shipping.USPS.dll.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\Nop.Plugin.Shipping.USPS.dll
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.USPS\Nop.Plugin.Shipping.USPS.pdb
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.csprojResolveAssemblyReference.cache
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.dll
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.pdb

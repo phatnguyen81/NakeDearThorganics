@@ -17,20 +17,21 @@
                     AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
                 </script>
             </header>
-                <div class="master-wrapper-content">
-                    @Html.Widget("content_before")
+            <section>
+                @Html.Widget("content_before")
 
-                    @if (IsSectionDefined("Breadcrumb"))
-                    {
-                        @RenderSection("Breadcrumb")
-                    }
-                    <section>
-                        @RenderBody()
-                    </section>
-                    @Html.Widget("content_after")
-                </div>
-                @Html.Action("Footer", "Common")
-</div>
+                @if (IsSectionDefined("Breadcrumb"))
+                {
+                    @RenderSection("Breadcrumb")
+                }
+
+                @RenderBody()
+
+
+                @Html.Widget("content_after")
+            </section>
+            @Html.Action("Footer", "Common")
+        </div>
     </div>
 </div>
 @Html.Action("EuCookieLaw", "Common")

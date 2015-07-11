@@ -9,3 +9,14 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandar
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.pdb
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Views\PaymentPayPalStandard\Configure.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Views\PaymentPayPalStandard\PaymentInfo.cshtml
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\web.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Description.txt
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\logo.jpg
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.dll.config
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.dll
+C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.pdb
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.csprojResolveAssemblyReference.cache
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.dll
+C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.pdb
