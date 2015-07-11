@@ -8,13 +8,3 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\No
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.pdb
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Views\TaxCountryStateZip\Configure.cshtml
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Description.txt
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\web.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\logo.jpg
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Nop.Plugin.Tax.CountryStateZip.dll.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Nop.Plugin.Tax.CountryStateZip.dll
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Nop.Plugin.Tax.CountryStateZip.pdb
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.csprojResolveAssemblyReference.cache
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.dll
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.pdb

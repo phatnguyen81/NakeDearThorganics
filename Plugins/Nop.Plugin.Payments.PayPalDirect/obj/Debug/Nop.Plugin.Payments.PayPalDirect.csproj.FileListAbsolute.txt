@@ -9,14 +9,3 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalDirect\obj\Debug\Nop.Plugin.Payments.PayPalDirect.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalDirect\obj\Debug\Nop.Plugin.Payments.PayPalDirect.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalDirect\obj\Debug\Nop.Plugin.Payments.PayPalDirect.pdb
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\Views\PaymentPayPalDirect\Configure.cshtml
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\Views\PaymentPayPalDirect\PaymentInfo.cshtml
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\web.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\Description.txt
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\logo.jpg
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\Nop.Plugin.Payments.PayPalDirect.dll.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\Nop.Plugin.Payments.PayPalDirect.dll
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PayPalDirect\Nop.Plugin.Payments.PayPalDirect.pdb
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalDirect\obj\Debug\Nop.Plugin.Payments.PayPalDirect.csprojResolveAssemblyReference.cache
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalDirect\obj\Debug\Nop.Plugin.Payments.PayPalDirect.dll
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PayPalDirect\obj\Debug\Nop.Plugin.Payments.PayPalDirect.pdb

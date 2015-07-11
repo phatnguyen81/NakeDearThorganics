@@ -8,13 +8,3 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.AustraliaPost\obj\Debug\Nop.Plugin.Shipping.AustraliaPost.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.AustraliaPost\obj\Debug\Nop.Plugin.Shipping.AustraliaPost.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.AustraliaPost\obj\Debug\Nop.Plugin.Shipping.AustraliaPost.pdb
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost\Views\ShippingAustraliaPost\Configure.cshtml
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost\Description.txt
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost\web.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost\logo.jpg
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost\Nop.Plugin.Shipping.AustraliaPost.dll.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost\Nop.Plugin.Shipping.AustraliaPost.dll
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.AustraliaPost\Nop.Plugin.Shipping.AustraliaPost.pdb
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.AustraliaPost\obj\Debug\Nop.Plugin.Shipping.AustraliaPost.csprojResolveAssemblyReference.cache
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.AustraliaPost\obj\Debug\Nop.Plugin.Shipping.AustraliaPost.dll
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.AustraliaPost\obj\Debug\Nop.Plugin.Shipping.AustraliaPost.pdb

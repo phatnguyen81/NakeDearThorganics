@@ -9,14 +9,3 @@ E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugi
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.dll
 E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.pdb
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\Views\FeedFroogle\Configure.cshtml
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\Description.txt
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\web.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\Content\styles.css
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\logo.jpg
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.dll.config
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.dll
-C:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.pdb
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.csprojResolveAssemblyReference.cache
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.dll
-C:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.pdb
