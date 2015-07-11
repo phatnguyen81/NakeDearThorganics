@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.Head.cshtml";
+}
+@Html.Widget("body_start_html_tag_after")
+@Html.Partial("_Notifications")
+@Html.Action("JavaScriptDisabledWarning", "Common")
+@Html.Partial("OldInternetExplorerWarning")
+
+<div id="body">
+    <div id="page">
+        <div id="shadow">
+            <div class="shadow"></div>
+            <header id="header">
+                @Html.Action("AdminHeaderLinks", "Common")
+                @Html.Partial("Header")
+                <script type="text/javascript">
+                    AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
+                </script>
+            </header>
+                <div class="master-wrapper-content">
+                    @Html.Widget("content_before")
+
+                    @if (IsSectionDefined("Breadcrumb"))
+                    {
+                        @RenderSection("Breadcrumb")
+                    }
+                    <section>
+                        @RenderBody()
+                    </section>
+                    @Html.Widget("content_after")
+                </div>
+                @Html.Action("Footer", "Common")
+</div>
+    </div>
+</div>
+@Html.Action("EuCookieLaw", "Common")
+@Html.Widget("body_end_html_tag_before")

@@ -1,0 +1,11 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb

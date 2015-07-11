@@ -1,0 +1,11 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\Views\PaymentManual\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\Views\PaymentManual\PaymentInfo.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\Nop.Plugin.Payments.Manual.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\Nop.Plugin.Payments.Manual.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.Manual\Nop.Plugin.Payments.Manual.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.Manual\obj\Debug\Nop.Plugin.Payments.Manual.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.Manual\obj\Debug\Nop.Plugin.Payments.Manual.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.Manual\obj\Debug\Nop.Plugin.Payments.Manual.pdb

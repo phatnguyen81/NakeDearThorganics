@@ -1,0 +1,10 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.Fedex\Views\ShippingFedex\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.Fedex\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.Fedex\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.Fedex\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.Fedex\Nop.Plugin.Shipping.Fedex.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.Fedex\Nop.Plugin.Shipping.Fedex.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.Fedex\Nop.Plugin.Shipping.Fedex.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.Fedex\obj\Debug\Nop.Plugin.Shipping.Fedex.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.Fedex\obj\Debug\Nop.Plugin.Shipping.Fedex.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.Fedex\obj\Debug\Nop.Plugin.Shipping.Fedex.pdb

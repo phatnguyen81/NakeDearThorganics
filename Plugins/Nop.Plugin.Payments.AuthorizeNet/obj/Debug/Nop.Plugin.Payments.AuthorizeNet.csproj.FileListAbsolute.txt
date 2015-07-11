@@ -1,0 +1,11 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Views\PaymentAuthorizeNet\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Views\PaymentAuthorizeNet\PaymentInfo.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Nop.Plugin.Payments.AuthorizeNet.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Nop.Plugin.Payments.AuthorizeNet.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.AuthorizeNet\Nop.Plugin.Payments.AuthorizeNet.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.AuthorizeNet\obj\Debug\Nop.Plugin.Payments.AuthorizeNet.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.AuthorizeNet\obj\Debug\Nop.Plugin.Payments.AuthorizeNet.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.AuthorizeNet\obj\Debug\Nop.Plugin.Payments.AuthorizeNet.pdb

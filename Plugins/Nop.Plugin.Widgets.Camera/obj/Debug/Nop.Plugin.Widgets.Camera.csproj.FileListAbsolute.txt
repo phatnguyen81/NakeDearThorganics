@@ -1,0 +1,11 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\Views\WidgetsCamera\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\Views\WidgetsCamera\PublicInfo.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\Nop.Plugin.Widgets.Camera.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\Nop.Plugin.Widgets.Camera.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Widgets.Camera\Nop.Plugin.Widgets.Camera.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Widgets.Camera\obj\Debug\Nop.Plugin.Widgets.Camera.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Widgets.Camera\obj\Debug\Nop.Plugin.Widgets.Camera.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Widgets.Camera\obj\Debug\Nop.Plugin.Widgets.Camera.pdb

@@ -1,0 +1,10 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.FixedRate\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.FixedRate\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.FixedRate\Views\TaxFixedRate\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.FixedRate\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.pdb

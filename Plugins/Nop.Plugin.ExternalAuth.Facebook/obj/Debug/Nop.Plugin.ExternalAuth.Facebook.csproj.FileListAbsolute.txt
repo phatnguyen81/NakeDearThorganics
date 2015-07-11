@@ -1,0 +1,14 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Views\ExternalAuthFacebook\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Views\ExternalAuthFacebook\PublicInfo.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Content\facebookstyles.css
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Content\Images\facebook-signing.png
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Nop.Plugin.ExternalAuth.Facebook.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Nop.Plugin.ExternalAuth.Facebook.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExternalAuth.Facebook\Nop.Plugin.ExternalAuth.Facebook.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.ExternalAuth.Facebook\obj\Debug\Nop.Plugin.ExternalAuth.Facebook.csproj.App.config
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.ExternalAuth.Facebook\obj\Debug\Nop.Plugin.ExternalAuth.Facebook.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.ExternalAuth.Facebook\obj\Debug\Nop.Plugin.ExternalAuth.Facebook.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.ExternalAuth.Facebook\obj\Debug\Nop.Plugin.ExternalAuth.Facebook.pdb

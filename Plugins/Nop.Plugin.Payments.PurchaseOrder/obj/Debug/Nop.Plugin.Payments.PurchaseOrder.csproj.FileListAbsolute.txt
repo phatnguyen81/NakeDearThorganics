@@ -1,0 +1,11 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Views\PaymentPurchaseOrder\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Views\PaymentPurchaseOrder\PaymentInfo.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Nop.Plugin.Payments.PurchaseOrder.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Nop.Plugin.Payments.PurchaseOrder.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Payments.PurchaseOrder\Nop.Plugin.Payments.PurchaseOrder.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PurchaseOrder\obj\Debug\Nop.Plugin.Payments.PurchaseOrder.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PurchaseOrder\obj\Debug\Nop.Plugin.Payments.PurchaseOrder.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Payments.PurchaseOrder\obj\Debug\Nop.Plugin.Payments.PurchaseOrder.pdb

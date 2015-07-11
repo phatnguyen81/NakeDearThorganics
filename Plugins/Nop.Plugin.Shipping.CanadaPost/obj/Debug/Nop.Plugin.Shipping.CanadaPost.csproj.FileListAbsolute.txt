@@ -1,0 +1,10 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Views\ShippingCanadaPost\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Debug\Nop.Plugin.Shipping.CanadaPost.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Debug\Nop.Plugin.Shipping.CanadaPost.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Debug\Nop.Plugin.Shipping.CanadaPost.pdb

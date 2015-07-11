@@ -1,0 +1,10 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.UPS\Views\ShippingUPS\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.UPS\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.UPS\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.UPS\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.UPS\obj\Debug\Nop.Plugin.Shipping.UPS.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.UPS\obj\Debug\Nop.Plugin.Shipping.UPS.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.Shipping.UPS\obj\Debug\Nop.Plugin.Shipping.UPS.pdb

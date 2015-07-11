@@ -1,0 +1,10 @@
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\SMS.Verizon\Views\SmsVerizon\Configure.cshtml
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\SMS.Verizon\Description.txt
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\SMS.Verizon\web.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\SMS.Verizon\logo.jpg
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\SMS.Verizon\Nop.Plugin.SMS.Verizon.dll.config
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\SMS.Verizon\Nop.Plugin.SMS.Verizon.dll
+E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\SMS.Verizon\Nop.Plugin.SMS.Verizon.pdb
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.SMS.Verizon\obj\Debug\Nop.Plugin.SMS.Verizon.csprojResolveAssemblyReference.cache
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.SMS.Verizon\obj\Debug\Nop.Plugin.SMS.Verizon.dll
+E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.SMS.Verizon\obj\Debug\Nop.Plugin.SMS.Verizon.pdb

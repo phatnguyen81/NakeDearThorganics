@@ -113,7 +113,7 @@
 	position:absolute;
 	z-index:100;
 	content:'';
-	background: url(../image/menu-arr.png) 0 0 no-repeat;
+	background: url(images/menu-arr.png) 0 0 no-repeat;
     display: block;
     font-family: FontAwesome;
 	line-height:8px;

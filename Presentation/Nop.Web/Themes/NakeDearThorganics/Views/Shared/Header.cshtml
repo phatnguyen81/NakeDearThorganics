@@ -1,0 +1,99 @@
+﻿@using Nop.Core
+@using Nop.Core.Infrastructure
+@using Nop.Services.Localization
+@using Nop.Web.Framework.Themes
+@{
+    //logo path
+    var currentThemeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+    var logoPath = "~/Themes/" + currentThemeName + "/Content/images/logo.png";
+
+    //store name
+    var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+}
+
+    @Html.Widget("header")
+<div class="toprow">
+    
+    @Html.Action("CurrencySelector", "Common")
+    
+    @Html.Action("HeaderLinks", "Common")
+
+    <div class="header-selectors-wrapper">
+
+        @Html.Action("TaxTypeSelector", "Common")
+
+        @Html.Action("LanguageSelector", "Common")
+
+        @Html.Widget("header_selectors")
+    </div>
+    <div class="header-links-wrapper">
+        @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="toprow-1">
+                <a class="swipe-control" href="#"><i class="icon-reorder"></i></a>
+                <div class="top-search">
+                    <i class="icon-search"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="logo-block">
+    <div>
+        <div id="logo">
+            <a href="@Url.RouteUrl("HomePage")">
+                <img src="@Url.Content(logoPath)" title="@storeName" alt="@storeName" />
+            </a>
+        </div>
+        <div class="cart-position">
+            <div class="cart-inner">
+                <div id="cart">
+                    <div class="heading">
+                        <span class="link_a">
+                            <i class="icon-shopping-cart"></i>
+                            <b>Cart:<br></b>
+                            <span class="sc-button"></span>
+                            <span id="cart-total2">0</span>
+                            <span id="cart-total">0 item(s) - $0.00</span>
+                            <i class="icon-angle-down"></i>
+                            <span class="clear"></span>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="content-scroll">
+                            <div class="empty">Your shopping cart is empty!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logged">
+            <li class="login_h"><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=account/login"><i class="icon-lock"></i>Login</a></li> <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=account/register"><i class="icon-file-alt"></i>Create an account</a></li>
+        </div>
+        <div id="search">
+            <div class="inner">
+                @Html.Action("SearchBox", "Catalog")
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="menu">
+    @Html.Action("TopMenu", "Catalog")
+    <div class="clear"></div>
+</div>
+    @*<div class="header-lower">
+        <div class="header-logo">
+            <a href="@Url.RouteUrl("HomePage")">
+                <img title="" alt="@storeName" src="@Url.Content(logoPath)">
+            </a>
+        </div>
+        <div class="search-box">
+            @Html.Action("SearchBox", "Catalog")
+        </div>
+    </div>*@

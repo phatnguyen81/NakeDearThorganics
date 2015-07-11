@@ -3659,3 +3659,23 @@ label{
 .close:hover, .close:focus {
 	opacity:1
 	}
+
+
+.flyout-cart {
+	position: absolute;
+	top: 45px;
+	right: 0;
+	z-index: 100;
+	width: 300px;
+	box-shadow: 0 0 2px rgba(0,0,0,0.25);
+	background-color: #fff;
+}
+.flyout-cart.active {
+	display: block;
+}
+.flyout-cart {
+	display: none;
+}
+.admin-header-links {
+    text-align: center;
+}

@@ -10,28 +10,27 @@
     var browser = Request.Browser;
     if (browser.Browser == "IE" && browser.MajorVersion == 8)
     {
-        Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/ie8.css", themeName));
+       
     }
 
-
-    //add jQuery UI css file
-    Html.AppendCssFileParts("~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css");
 
     if (browser.Browser == "IE" && browser.MajorVersion == 8)
     {
-        Html.AddScriptParts("~/Scripts/selectivizr.min.js");
-        Html.AddScriptParts("~/Scripts/respond.min.js");
+      
     }
 
+    
+    
     // css
+
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/livesearch.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Scripts/jquery/colorbox/colorbox.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Scripts/js/fancybox/jquery.fancybox-1.3.4.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Scripts/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css", themeName));
-    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/jquery.bxslider.css.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/jquery.bxslider.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/photoswipe.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/responsive.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/superfish.css", themeName));
-    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/camera.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/jquery.prettyPhoto.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/slideshow.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/font-awesome.css", themeName));
@@ -41,26 +40,35 @@
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/bootstrap.css", themeName));
 
     //js
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/script.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/superfish.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jquery.mobile-events.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/nivo-slider/jquery.nivo.slider.pack.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/script.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jscript_zjquery.anythingslider.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jquery.prettyPhoto.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/cloud-zoom.1.0.2.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jQuery.equalHeights.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/common.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/tabs.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/bootstrap/bootstrap.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/jquery.cycle.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/jquery.jcarousel.min.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/colorbox/jquery.colorbox.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/fancybox/jquery.fancybox-1.3.4.pack.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/ui/external/jquery.cookie.js", themeName));
-    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/ui/jquery-ui-1.8.16.custom.min.js", themeName));
     Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/jquery-1.7.1.min.js", themeName));
-}
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/ui/jquery-ui-1.8.16.custom.min.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/ui/external/jquery.cookie.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/fancybox/jquery.fancybox-1.3.4.pack.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/colorbox/jquery.colorbox.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/jquery.jcarousel.min.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/jquery.cycle.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/tabs.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/common.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jQuery.equalHeights.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/cloud-zoom.1.0.2.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jquery.prettyPhoto.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jscript_zjquery.anythingslider.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/script.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/nivo-slider/jquery.nivo.slider.pack.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jquery.mobile-events.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/superfish.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/script.js", themeName));
+    
+    if (browser.Browser == "IE")
+    {
+        Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/photo-swipe/code.photoswipe.jquery-3.0.5.js", themeName));
+        Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/photo-swipe/klass.min.js", themeName));
+        Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/bxslider/jquery.bxslider.js", themeName));
+        Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/sl/jscript_zjquery.anythingslider.js", themeName));
+        Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/sl/jquery.mobile.customized.min.js", themeName));
+        Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jquery/html5.js", themeName));
+        Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/jquery.fancybox-1.3.4-iefix.js", themeName));
+    }
 }
 
 <meta charset="UTF-8" />
@@ -79,30 +87,10 @@
 
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
 
-<!--[if IE]>
-<script type="text/javascript" src="Scripts/js/fancybox/jquery.fancybox-1.3.4-iefix.js"></script>
-<![endif]-->
-<!--[if IE]>
-<script type="text/javascript" src="Scripts/js/html5.js"></script>
-<![endif]-->
 <!--[if lt IE 8]>
 <div style='clear:both;height:59px;padding:0 15px 0 15px;position:relative;z-index:10000;text-align:center;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
 <![endif]-->
 
-
-<!--[if !IE]>
-<script type="text/javascript" src="Scripts/js//sl/jquery.mobile.customized.min.js"></script>
-<![endif]-->
-<!--[if IE]>
-<script type="text/javascript" src="Scripts/js//sl/jscript_zjquery.anythingslider.js"></script>
-<![endif]-->
-<script type="text/javascript" src="Scripts/js/sl/camera.js"></script>
-<script type="text/javascript" language="javascript" src="Scripts/js/bxslider/jquery.bxslider.js"></script>
-<script type="text/javascript" language="javascript" src="Scripts/js/photo-swipe/klass.min.js"></script>
-<script type="text/javascript" language="javascript" src="Scripts/js/photo-swipe/code.photoswipe.jquery-3.0.5.js"></script>
-<script type="text/javascript" src="Scripts/js/sl/jquery.mobile.customized.min.js"></script>
-<script type="text/javascript" src="Scripts/js/sl/camera.js"></script>
-<script type="text/javascript" src="Scripts/jquery/jquery.cycle.js"></script>
 <!--[if  IE 8]>
 <style>
     .success, #header #cart .content  { border:1px solid #e7e7e7;}
@@ -111,11 +99,3 @@
 <!--[if  IE 8]>
 <link rel="stylesheet" type="text/css" href="Content/ie7.css" />
 <![endif]-->
-<!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="Content/ie6.css" />
-<script type="text/javascript" src="Scripts/DD_belatedPNG_0.0.8a-min.js"></script>
-<script type="text/javascript">
-    DD_belatedPNG.fix('#logo img');
-</script>
-<![endif]-->
-<link rel="stylesheet" type="text/css" href="Content/livesearch.css" />
