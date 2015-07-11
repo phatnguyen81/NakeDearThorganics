@@ -7,12 +7,3 @@ E:\GitHub\NakeDearThorganics\Tests\Nop.Tests\bin\Debug\Rhino.Mocks.xml
 E:\GitHub\NakeDearThorganics\Tests\Nop.Tests\obj\Debug\Nop.Tests.csprojResolveAssemblyReference.cache
 E:\GitHub\NakeDearThorganics\Tests\Nop.Tests\obj\Debug\Nop.Tests.dll
 E:\GitHub\NakeDearThorganics\Tests\Nop.Tests\obj\Debug\Nop.Tests.pdb
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\bin\Debug\Nop.Tests.dll
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\bin\Debug\Nop.Tests.pdb
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\bin\Debug\nunit.framework.dll
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\bin\Debug\Rhino.Mocks.dll
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\bin\Debug\nunit.framework.xml
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\bin\Debug\Rhino.Mocks.xml
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\obj\Debug\Nop.Tests.csprojResolveAssemblyReference.cache
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\obj\Debug\Nop.Tests.dll
-C:\GitHub\NakeDearThorganics\Tests\Nop.Tests\obj\Debug\Nop.Tests.pdb
