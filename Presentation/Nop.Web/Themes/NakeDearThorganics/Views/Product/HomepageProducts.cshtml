@@ -4,32 +4,38 @@
 
 @if (Model.Count > 0)
 {
-    <div class="span9  " id="content">
-        <script type="text/javascript">
+    var i = 0;
+    <div class="span9">
+        <div class="row">
+            <div class="span9" id="content">
+                <script type="text/javascript">
 
-            if ($('.container').width() > 723) {
-                (function ($) { $.fn.equalHeights = function (minHeight, maxHeight) { tallest = (minHeight) ? minHeight : 0; this.each(function () { if ($(this).height() > tallest) { tallest = $(this).height() } }); if ((maxHeight) && tallest > maxHeight) tallest = maxHeight; return this.each(function () { $(this).height(tallest) }) } })(jQuery)
-                $(window).load(function () {
-                    if ($(".maxheight-feat").length) {
-                        $(".maxheight-feat").equalHeights();
+                    if ($('.container').width() > 723) {
+                        (function ($) { $.fn.equalHeights = function (minHeight, maxHeight) { tallest = (minHeight) ? minHeight : 0; this.each(function () { if ($(this).height() > tallest) { tallest = $(this).height() } }); if ((maxHeight) && tallest > maxHeight) tallest = maxHeight; return this.each(function () { $(this).height(tallest) }) } })(jQuery)
+                        $(window).load(function () {
+                            if ($(".maxheight-feat").length) {
+                                $(".maxheight-feat").equalHeights();
+                            };
+                        });
                     };
-                });
-            };
-        </script>
-        <div class="box featured">
-            <div class="box-heading">
-                @T("HomePage.Products")
-            </div>
-            <div class="box-content">
-                <div class="box-product">
-                    <ul class="row">
-                        @foreach (var item in Model)
-                        {
-                            <li class="span3">
-                                @Html.Partial("_ProductBox", item)
-                            </li>
-                        }
-                    </ul>
+                </script>
+                <div class="box featured">
+                    <div class="box-heading">
+                        @T("HomePage.Products")
+                    </div>
+                    <div class="box-content">
+                        <div class="box-product">
+                            <ul class="row">
+                                @foreach (var item in Model)
+                                {
+                                    <li class="@(i%3 == 0? "first-in-line":"") span3">
+                                        @Html.Partial("_ProductBox", item)
+                                    </li>
+                                    i++;
+                                }
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

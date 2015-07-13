@@ -1644,6 +1644,9 @@ aside .box .box-content .box-product ul>li {
 	font-weight:normal;
 	margin-bottom:5px;
 	padding:0 20px;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    height: 40px;
 }
 .box-product .rating {
 	display: block;

@@ -8,6 +8,76 @@
         @*@Html.Action("HomepageCategories", "Catalog")*@
         @Html.Widget("home_page_before_products")
         @Html.Action("HomepageProducts", "Product")
+        
+        <aside class="span3" id="column-right">
+            <script>
+                                    jQuery(function(){
+                                        jQuery('#camera_wrap_0').camera({
+                                            navigation: true,
+                                            playPause: false,
+                                            thumbnails: false,
+                                            navigationHover: false,
+                                            barPosition: 'top',
+                                            loader: false,
+                                            time: 3000,
+                                            transPeriod:800,
+                                            alignment: 'center',
+                                            autoAdvance: true,
+                                            mobileAutoAdvance: true,
+                                            barDirection: 'leftToRight',
+                                            barPosition: 'bottom',
+                                            easing: 'easeInOutExpo',
+                                            fx: 'simpleFade',
+                                            height: '32.68%',
+                                            minHeight: '242px',
+                                            hover: true,
+                                            pagination: true,
+                                            loaderColor			: '#8abfa1',
+                                            loaderBgColor		: 'transparent',
+                                            loaderOpacity		: 1,
+                                            loaderPadding		: 0,
+                                            loaderStroke		: 3
+                                        });
+                                    });
+            </script>
+            <div class="fluid_container">
+                <div id="camera_wrap_0">
+                    <div title="slide-1" data-thumb="http://livedemo00.template-help.com/opencart_47280/image/cache/data/slide-1-1-270x242.jpg" data-link="index.php?route=product/product&amp;product_id=33" data-src="http://livedemo00.template-help.com/opencart_47280/image/cache/data/slide-1-1-270x242.jpg">
+                        <div class="camera_caption fadeIn">
+                            <h1>Lorem ipsum dolor sit amet conse ctetur</h1>
+                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod</p>
+                            <a href="index.php?route=product/product&product_id=33">Shop now!</a>
+                        </div>
+                    </div>
+                    <div title="slide-2" data-thumb="http://livedemo00.template-help.com/opencart_47280/image/cache/data/slide-1-2-270x242.jpg" data-link="index.php?route=product/product&amp;product_id=29" data-src="http://livedemo00.template-help.com/opencart_47280/image/cache/data/slide-1-2-270x242.jpg">
+                        <div class="camera_caption fadeIn">
+                            <h1>Dolor sit amet conse ctetur adipisicing elit</h1>
+                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod</p>
+                            <a href="index.php?route=product/product&product_id=29">Shop now!</a>
+                        </div>
+                    </div>
+                    <div title="slide-3" data-thumb="http://livedemo00.template-help.com/opencart_47280/image/cache/data/slide-1-3-270x242.jpg" data-link="index.php?route=product/product&amp;product_id=35" data-src="http://livedemo00.template-help.com/opencart_47280/image/cache/data/slide-1-3-270x242.jpg">
+                        <div class="camera_caption fadeIn">
+                            <h1>Ctetur adipisicing elit, sed do eiusmod</h1>
+                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod</p>
+                            <a href="index.php?route=product/product&product_id=35">Shop now!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div> <div id="banner0" class="banner row">
+                <div class="span4">
+                    <a href="index.php?route=product/product&amp;product_id=32">
+                        <img src="http://livedemo00.template-help.com/opencart_47280/image/cache/data/banner-270x175.jpg" alt="banner-1" title="banner-1" /><div class="s-desc">
+                            <h1>Free <br>Shipping</h1>
+                            on orders over $99.
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        
+
         @Html.Widget("home_page_before_best_sellers")
         @*@Html.Action("HomepageBestSellers", "Product")*@
         @Html.Widget("home_page_before_news")
