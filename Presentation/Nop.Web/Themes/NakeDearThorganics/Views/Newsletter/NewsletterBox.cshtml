@@ -2,12 +2,15 @@
 @using Nop.Web.Models.Newsletter;
 <div class="newsletter">
     <div class="title">
-        <strong>@T("Newsletter.Title")</strong>
+        <h3>@T("Newsletter.Title")</h3>
     </div>
     <div class="newsletter-subscribe" id="newsletter-subscribe-block">
         <div class="newsletter-email">
             @Html.TextBoxFor(x => x.NewsletterEmail, new { id = "newsletter-email", @class = "newsletter-subscribe-text", placeholder = T("Newsletter.Email.Placeholder") })
-            <input type="button" value="@T(Model.AllowToUnsubscribe ? "Newsletter.Options.Send" : "Newsletter.Options.Subscribe")" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button" />
+            @*<input type="button" value="@T(Model.AllowToUnsubscribe ? "Newsletter.Options.Send" : "Newsletter.Options.Subscribe")" id="newsletter-subscribe-button" class="button" />*@
+            <a class="button" id="newsletter-subscribe-button">
+                @T(Model.AllowToUnsubscribe ? "Newsletter.Options.Send" : "Newsletter.Options.Subscribe")
+            </a>
             @if (Model.AllowToUnsubscribe)
             {
                 <div class="options">

@@ -1107,6 +1107,7 @@
     <Content Include="Scripts\fineuploader\jquery.fineuploader-4.2.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery-migrate-1.2.1.js" />
     <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
@@ -1614,7 +1615,9 @@
     <Content Include="Themes\NakeDearThorganics\Content\font-awesome.css" />
     <Content Include="Themes\NakeDearThorganics\Content\font\fontawesome-webfont.svg" />
     <Content Include="Themes\NakeDearThorganics\Content\images\ajax-loader-small.gif" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\attention.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\back-button.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\blank.gif" />
     <Content Include="Themes\NakeDearThorganics\Content\images\calendar-next.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\calendar-prev.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\camera-loader.gif" />
@@ -1631,6 +1634,9 @@
     <Content Include="Themes\NakeDearThorganics\Content\images\last.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\loading.gif" />
     <Content Include="Themes\NakeDearThorganics\Content\images\logo.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\marker-button-left.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\marker-button-right.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\menu-arr.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\menu-icon.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\menu-tail.gif" />
     <Content Include="Themes\NakeDearThorganics\Content\images\move.png" />

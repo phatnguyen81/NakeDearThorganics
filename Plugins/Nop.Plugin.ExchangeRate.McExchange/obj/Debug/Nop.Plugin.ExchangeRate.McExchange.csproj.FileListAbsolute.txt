@@ -1,8 +1,0 @@
-E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExchangeRate.McExchange\Description.txt
-E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExchangeRate.McExchange\logo.jpg
-E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExchangeRate.McExchange\Nop.Plugin.ExchangeRate.McExchange.dll.config
-E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExchangeRate.McExchange\Nop.Plugin.ExchangeRate.McExchange.dll
-E:\GitHub\NakeDearThorganics\Presentation\Nop.Web\Plugins\ExchangeRate.McExchange\Nop.Plugin.ExchangeRate.McExchange.pdb
-E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.ExchangeRate.McExchange\obj\Debug\Nop.Plugin.ExchangeRate.McExchange.csprojResolveAssemblyReference.cache
-E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.ExchangeRate.McExchange\obj\Debug\Nop.Plugin.ExchangeRate.McExchange.dll
-E:\GitHub\NakeDearThorganics\Plugins\Nop.Plugin.ExchangeRate.McExchange\obj\Debug\Nop.Plugin.ExchangeRate.McExchange.pdb

@@ -133,7 +133,7 @@ a#hidden {
 	height:22px;
 	display: block;
 	margin-bottom: 7px;
-	background:url(../image/up-arrow.png) no-repeat left 0px;
+	background:url(images/up-arrow.png) no-repeat left 0px;
 }
 #back-top a:hover span {
 	background-position:left bottom;
@@ -1137,16 +1137,16 @@ aside .info li a:hover, .afine li a:hover, .acount li a:hover {
 	margin-bottom: 15px;
 	}
 .success {
-	background: #F6F6F6 url('../image/success.png') 10px center no-repeat;
+	background: #F6F6F6 url('images/success.png') 10px center no-repeat;
 	border: 1px solid #d8d8d8;
 }
 .warning {
-	background: #FFD1D1 url('../image/warning.png') 10px center no-repeat;
+	background: #FFD1D1 url('images/warning.png') 10px center no-repeat;
 	border: 1px solid #F8ACAC;
 	padding-left:30px!important;
 }
 .attention {
-	background: #FFF5CC url('../image/attention.png') 10px center no-repeat;
+	background: #FFF5CC url('images/attention.png') 10px center no-repeat;
 	border: 1px solid #F2DD8C;
 }
 .success .close, .warning .close, .attention .close, .information .close {
@@ -2893,11 +2893,11 @@ a.button-return-left span, a.button-return-right span, a.button-order-right span
 }
 a.button-return-left span, a.button-back-left span, a.button-wislish-left span {
 	padding:5px 0px 5px 14px;
-	background: url('../image/marker-button-left.png') left 8px no-repeat;
+	background: url('images/marker-button-left.png') left 8px no-repeat;
 }
 a.button-return-right span, a.button-order-right span, a.button-cont-right span, a.button-inf-left span {
 	padding:5px 14px 5px 0px;
-	background: url('../image/marker-button-right.png') right 8px no-repeat;
+	background: url('images/marker-button-right.png') right 8px no-repeat;
 }
 .cart-bottom a i.icon-check {
 	margin-right:0;
@@ -3423,7 +3423,7 @@ aside .banner > div {
 	z-index:10!important;
 }
 .rev-success {
-	background: #EAF7D9 url('../image/success.png') left no-repeat;
+	background: #EAF7D9 url('images/success.png') left no-repeat;
 	border: 1px solid #d8d8d8;
 	padding-left:20px;
 }
