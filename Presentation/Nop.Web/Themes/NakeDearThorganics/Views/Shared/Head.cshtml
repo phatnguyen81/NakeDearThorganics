@@ -26,7 +26,6 @@
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/livesearch.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Scripts/jquery/colorbox/colorbox.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Scripts/js/fancybox/jquery.fancybox-1.3.4.css", themeName));
-    //Html.AppendCssFileParts(string.Format("~/Themes/{0}/Scripts/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/jquery.bxslider.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/photoswipe.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/responsive.css", themeName));
@@ -38,6 +37,7 @@
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/cloud-zoom.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/bootstrap-responsive.css", themeName));
     Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/bootstrap.css", themeName));
+    Html.AppendCssFileParts("~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css");
 
     //js
     //Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/jquery/jquery-1.7.1.min.js", themeName));
@@ -61,6 +61,7 @@
     Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/photo-swipe/klass.min.js", themeName));
     Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/photo-swipe/code.photoswipe.jquery-3.0.5.js", themeName));
     Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/js/script.js", themeName));
+    Html.AddScriptParts(string.Format("~/Themes/{0}/Scripts/public.ajaxcart.js", themeName));
 
 
     if (browser.Browser == "IE")

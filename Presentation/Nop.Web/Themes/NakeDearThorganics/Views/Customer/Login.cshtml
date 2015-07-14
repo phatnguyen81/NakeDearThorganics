@@ -3,7 +3,7 @@
 @using Nop.Core;
 @using Nop.Core.Infrastructure;
 @{
-    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
 
     //title
     Html.AddTitleParts(T("PageTitle.Login").Text);
@@ -16,43 +16,109 @@
         registerUrl = webHelper.ModifyQueryString(registerUrl, "returnurl=" + HttpUtility.UrlEncode(this.Context.Request.QueryString["returnUrl"]), null);
     }
 }
-<div class="page login-page">
-    <div class="page-title">
-        <h1>@T("Account.Login.Welcome")</h1>
+<h1>@T("Account.Login.Welcome")</h1>
+@Html.Partial("_ExternalAuthentication.AssociateMessage")
+@Html.Partial("_ExternalAuthentication.Errors")
+<div class="container">
+    <div class="login-content row-fluid">
+        <div class="span6">
+            <div class="left">
+                @if (Model.CheckoutAsGuest)
+                {
+                    <div class="heading">
+                        <i class="icon-file-alt"></i>
+                        <div class="extra-wrap">
+                            <h2>@T("Account.Login.CheckoutAsGuestOrRegister")</h2>
+                        </div>
+                    </div>
+                    <div class="content">
+                        @Html.Action("TopicBlock", "Topic", new { systemName = "CheckoutAsGuestOrRegister" })
+                        <a href="@Url.RouteUrl("Checkout")" class="button-cont-right">@T("Account.Login.CheckoutAsGuest")<i class="icon-circle-arrow-right"></i></a>
+                        <a href="@registerUrl" class="button-cont-right">@T("Account.Register")<i class="icon-circle-arrow-right"></i></a>
+                    </div>
+                }
+                else
+                {
+                    <div class="heading">
+                        <i class="icon-file-alt"></i>
+                        <div class="extra-wrap">
+                            <h2>@T("Account.Login.NewCustomer")</h2>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>@T("Account.Login.NewCustomerText")</p>
+                        <a href="@registerUrl" class="button-cont-right">@T("Account.Register")<i class="icon-circle-arrow-right"></i></a>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="span6">
+            <div class="right">
+                <div class="heading">
+                    <i class="icon-key"></i>
+                    <div class="extra-wrap">
+                        <h2>@T("Account.Login.ReturningCustomer")</h2>
+                    </div>
+                </div>
+               
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal", id="login" }))
+                {
+                    var validationSummary = Html.ValidationSummary(true, T("Account.Login.Unsuccessful").Text);
+                    if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
+                    {
+                        <div class="message-error">@validationSummary</div>
+                    }
+                    <div class="content">
+                        @if (Model.UsernamesEnabled)
+                        {
+                            <div class="control-group">
+                                @Html.LabelFor(m => m.Username, new {@class = "padd-form control-label"}, ":")
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.Username, new {@class = "q1 margen-bottom", autofocus = "autofocus"})
+                                </div>
+                                @Html.ValidationMessageFor(m => m.Username)
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="control-group">
+                                @Html.LabelFor(m => m.Email, new { @class = "padd-form control-label" }, ":")
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "q1 margen-bottom", autofocus = "autofocus" })
+                                </div>
+                                @Html.ValidationMessageFor(m => m.Email)
+                            </div>
+                        }
+                        <div class="control-group">
+                            @Html.LabelFor(m => m.Password, new { @class = "padd-form control-label" }, ":")
+                            <div class="controls">
+                                @Html.PasswordFor(m => m.Password, new { @class = "q1 margen-bottom", autofocus = "autofocus" })
+                            </div>
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
+
+                         @if (Model.DisplayCaptcha)
+                         {
+                            <div class="captcha-box">
+                                @Html.Raw(Html.GenerateCaptcha())
+                            </div>
+                         }
+                        <div class="login-buttons">
+                            <a onclick="$('#login').submit()" class="button-cont-right">@T("Account.Login.LoginButton")<i class="icon-circle-arrow-right"></i></a>
+                            @Html.RouteLink(T("Account.Login.ForgotPassword").Text, "PasswordRecovery",null, new { @class = "link-login" })
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
     </div>
-    @Html.Partial("_ExternalAuthentication.AssociateMessage")
-    @Html.Partial("_ExternalAuthentication.Errors")
+</div>
+
+@*<div class="page login-page">
+    
     <div class="page-body">
         <div class="customer-blocks">
-            @if (Model.CheckoutAsGuest)
-            {
-                <div class="new-wrapper checkout-as-guest-or-register-block">
-                    <div class="title">
-                        <strong>@T("Account.Login.CheckoutAsGuestOrRegister")</strong>
-                    </div>
-                    <div class="text">
-                        @Html.Action("TopicBlock", "Topic", new { systemName = "CheckoutAsGuestOrRegister" })
-                    </div>
-                    <div class="buttons">
-                        <input type="button" class="button-1 checkout-as-guest-button" onclick="location.href='@Url.RouteUrl("Checkout")'" value="@T("Account.Login.CheckoutAsGuest")" />
-                        <input type="button" class="button-1 register-button" onclick="location.href='@registerUrl'" value="@T("Account.Register")" />
-                    </div>
-                </div>
-            }
-            else
-            {
-                <div class="new-wrapper register-block">
-                    <div class="title">
-                        <strong>@T("Account.Login.NewCustomer")</strong>
-                    </div>
-                    <div class="text">
-                        @T("Account.Login.NewCustomerText")
-                    </div>
-                    <div class="buttons">
-                        <input type="button" class="button-1 register-button" onclick="location.href='@registerUrl'" value="@T("Account.Register")" />
-                    </div>
-                </div>
-            }
+        
             <div class="returning-wrapper fieldset">
                 @using (Html.BeginForm())
                 {
@@ -111,4 +177,4 @@
         </div>
         @Html.Action("TopicBlock", "Topic", new { systemName = "LoginRegistrationInfo" })
     </div>
-</div>
+</div>*@

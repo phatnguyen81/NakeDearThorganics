@@ -1622,6 +1622,7 @@
     <Content Include="Themes\NakeDearThorganics\Content\images\calendar-prev.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\camera-loader.gif" />
     <Content Include="Themes\NakeDearThorganics\Content\images\camera_skins.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\cart-total2.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\close.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\compare-button.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\details.png" />
@@ -2032,6 +2033,7 @@
     <Content Include="Themes\NakeDearThorganics\Scripts\js\sl\camera.js" />
     <Content Include="Themes\NakeDearThorganics\Scripts\js\sl\jquery.mobile.customized.min.js" />
     <Content Include="Themes\NakeDearThorganics\Scripts\js\superfish.js" />
+    <Content Include="Themes\NakeDearThorganics\Scripts\public.ajaxcart.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2272,6 +2274,7 @@
     <Content Include="Themes\NakeDearThorganics\Views\Shared\Error.cshtml" />
     <Content Include="Themes\NakeDearThorganics\Views\Shared\LanguageAttributes.cshtml" />
     <Content Include="Themes\NakeDearThorganics\Views\Shared\OldInternetExplorerWarning.cshtml" />
+    <Content Include="Themes\NakeDearThorganics\Views\Shared\_SwipeMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

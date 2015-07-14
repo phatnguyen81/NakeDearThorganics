@@ -6,7 +6,8 @@
                 <input type="text" name="search" placeholder="" value="" />*@
     <input type="text" class="search-box-text" id="small-searchterms" autocomplete="off" name="q" placeholder="@T("Search.SearchBox.Tooltip")" />
     @Html.Widget("searchbox_before_search_button")
-    <button class="button-search"><i class="icon-search"></i><span>@T("Search")</span></button>
+    @*<button class="button-search"><i class="icon-search"></i><span>@T("Search")</span></button>*@
+    <div class="button-search" onclick="this.form.submit()"><i class="icon-search"></i><span>Search</span></div>
     if (Model.SearchTermMinimumLength > 0)
     {
         <script type="text/javascript">

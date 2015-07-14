@@ -1,0 +1,96 @@
+﻿@using Nop.Core
+@using Nop.Core.Domain.Customers
+@using Nop.Core.Domain.Orders
+@using Nop.Core.Infrastructure
+@using Nop.Services.Orders
+@using Nop.Services.Security
+@{
+    var customer = EngineContext.Current.Resolve<IWorkContext>().CurrentCustomer;
+    var permissionService = EngineContext.Current.Resolve<IPermissionService>();
+    var storeContext = EngineContext.Current.Resolve<IStoreContext>();
+
+    var wishlistEnabled = permissionService.Authorize(StandardPermissionProvider.EnableWishlist);
+    var shoppingCartEnabled = permissionService.Authorize(StandardPermissionProvider.EnableShoppingCart);
+    var wishlistItems = 0;
+    var shoppingCartItems=0;
+    if (customer.HasShoppingCartItems)
+    {
+        shoppingCartItems = customer.ShoppingCartItems
+            .Where(sci => sci.ShoppingCartType == ShoppingCartType.ShoppingCart)
+            .LimitPerStore(storeContext.CurrentStore.Id)
+            .ToList()
+            .GetTotalProducts();
+        wishlistItems = customer.ShoppingCartItems
+            .Where(sci => sci.ShoppingCartType == ShoppingCartType.Wishlist)
+            .LimitPerStore(storeContext.CurrentStore.Id)
+            .ToList()
+            .GetTotalProducts();
+    }
+    var isAuthenticated = customer.IsRegistered();
+}
+<div class="swipe">
+    <div class="swipe-menu">
+        <ul class="links">
+            <li class="first"><a class="active" href="@Url.RouteUrl("HomePage")"><i class="icon-home"></i>@T("HomePage")</a></li>
+            @if (wishlistEnabled)
+            {
+                <li><a class="" href="@Url.RouteUrl("Wishlist")"><i class="icon-star"></i>@T("Wishlist")<span class="wishlist-qty">@T("Wishlist.HeaderQuantity", wishlistItems)</span></a></li>
+            }
+            
+            @if (shoppingCartEnabled)
+            {
+                <li><a class="" href="@Url.RouteUrl("ShoppingCart")"><i class="icon-star"></i>@T("ShoppingCart")<span class="cart-qty">@T("ShoppingCart.HeaderQuantity", shoppingCartItems)</span></a></li>
+            }
+            <li><a class="" href="@Url.RouteUrl("Checkout")"><i class="icon-check"></i>@T("Checkout")</a></li>
+            @if (isAuthenticated)
+            {
+                <li><a class="" href="@Url.RouteUrl("CustomerInfo")"><i class="icon-user"></i>@T("Account.MyAccount")</a></li>
+                <li class="login_h"><a href="@Url.RouteUrl("Logout")"><i class="icon-lock"></i>@T("Account.Logout")</a></li>
+            }
+            else
+            {
+                <li class="login_h"><a href="@Url.RouteUrl("Login")"><i class="icon-lock"></i>@T("Account.Login")</a></li>
+                <li><a href="@Url.RouteUrl("Register")"><i class="icon-file-alt"></i>@T("Account.Register")</a></li>
+            }
+            
+        </ul>
+        <div id="currency" class="header-button">
+            <div>
+                <div class="heading-1"><i class="icon-money"></i>Currency<i class="icon-angle-down"></i></div>
+                <div class="heading">
+                    $<i class="icon-angle-down"></i>
+                </div>
+            </div>
+            <ul>
+                <form action="http://livedemo00.template-help.com/opencart_47280/index.php?route=module/currency" method="post" enctype="multipart/form-data">
+                    <li><a title="Euro" onclick="$('input[name=\'currency_code\']').attr('value', 'EUR').submit(); $(this).parent().parent().submit();"><span>€</span></a></li>
+                    <li><a title="Pound Sterling" onclick="$('input[name=\'currency_code\']').attr('value', 'GBP').submit(); $(this).parent().parent().submit();"><span>£</span></a></li>
+                    <li><a title="US Dollar"><span class="act">$</span></a></li>
+                    <input type="hidden" name="currency_code" value="" />
+                    <input type="hidden" name="redirect" value="http://livedemo00.template-help.com/opencart_47280/index.php?route=common/home" />
+                </form>
+            </ul>
+        </div>
+        <ul class="foot">
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=information/information&amp;information_id=4">About</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=information/information&amp;information_id=6">Delivery</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=information/information&amp;information_id=3">Privacy Policy</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=information/information&amp;information_id=5">Terms &amp; Conditions</a></li>
+        </ul>
+        <ul class="foot foot-1">
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=information/contact">Contact Us</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=account/return/insert">Returns</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=information/sitemap">Site Map</a></li>
+        </ul>
+        <ul class="foot foot-2">
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=product/manufacturer">Brands</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=account/voucher">Gift Vouchers</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=affiliate/account">Affiliates</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=product/special">Specials</a></li>
+        </ul>
+        <ul class="foot foot-3">
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=account/order">Order History</a></li>
+            <li><a href="http://livedemo00.template-help.com/opencart_47280/index.php?route=account/newsletter">Newsletter</a></li>
+        </ul>
+    </div>
+</div>

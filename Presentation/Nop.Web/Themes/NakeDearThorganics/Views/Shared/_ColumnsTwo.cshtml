@@ -34,26 +34,44 @@
         @RenderSection("Breadcrumb")
     } 
 }
-<div class="side-2">
-    @if (IsSectionDefined("left"))
-    {
-        @RenderSection("left")
-    }
-    else
-    {
-        @Html.Widget("left_side_column_before")
-        @Html.Action("CategoryNavigation", "Catalog", new { currentCategoryId = currentCategoryId, currentProductId = currentProductId })
-        @Html.Widget("left_side_column_after_category_navigation")
-        @Html.Action("ManufacturerNavigation", "Catalog", new { currentManufacturerId = currentManufacturerId })
-        @Html.Action("VendorNavigation", "Catalog")
-        @Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 64 })
-        @Html.Action("PopularProductTags", "Catalog")
-        @Html.Action("PollBlock", "Poll", new { systemKeyword = "LeftColumnPoll" })
-        @Html.Widget("left_side_column_after")
-    }
+
+<div id="container">
+    <p id="back-top"> <a href="#top"><span></span></a> </p>
+    <div class="container">
+        <div class="row">
+            <div class="span9">
+                <div class="row">
+                    <div class="span9" id="content">
+                        @Html.Widget("main_column_before")
+                        @RenderBody()
+                        @Html.Widget("main_column_after")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="center-2">
-    @Html.Widget("main_column_before")
-    @RenderBody()
-    @Html.Widget("main_column_after")
-</div>
+
+    @*<div class="side-2">
+            @if (IsSectionDefined("left"))
+            {
+                @RenderSection("left")
+            }
+            else
+            {
+                @Html.Widget("left_side_column_before")
+                @Html.Action("CategoryNavigation", "Catalog", new { currentCategoryId = currentCategoryId, currentProductId = currentProductId })
+                @Html.Widget("left_side_column_after_category_navigation")
+                @Html.Action("ManufacturerNavigation", "Catalog", new { currentManufacturerId = currentManufacturerId })
+                @Html.Action("VendorNavigation", "Catalog")
+                @Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 64 })
+                @Html.Action("PopularProductTags", "Catalog")
+                @Html.Action("PollBlock", "Poll", new { systemKeyword = "LeftColumnPoll" })
+                @Html.Widget("left_side_column_after")
+            }
+        </div>
+        <div class="center-2">
+            @Html.Widget("main_column_before")
+            @RenderBody()
+            @Html.Widget("main_column_after")
+        </div>*@

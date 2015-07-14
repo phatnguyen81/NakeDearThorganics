@@ -577,13 +577,13 @@ header #cart .cart td.name a {
 header #cart .cart td .total {
 	font-size:11px;
 	font-weight:bold;
-	color:#f84e62;
+	color:#000;
 }
 header #cart .cart .item-cart-1 td {
 	padding-top:0;
 }
 header #cart .cart td {
-	color: #f84e62;
+	/*color: #f84e62;*/
 	vertical-align: top;
 	}
 header #cart .cart .image {
@@ -608,14 +608,14 @@ header #cart .cart .quantity {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:11px;
 	font-weight:bold;
-	color:#000;
-	text-transform:uppercase;
+	color:#000 !important;
 }
 header #cart .cart td.total {
-	font-size:12px;
-	font-weight:600;
-	color:#c81908;
-	text-align: right;
+	text-align: right;*/
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	
 	}
 .cart-module .remove img:hover {
 	overflow:hidden;
@@ -2622,7 +2622,7 @@ input#sub_category {
 	margin-right:14px;
 	}
 .login-content .heading h2 {
-	margin-top:0;
+	margin-top:13px;
 	margin-bottom:2px;
 	font-size:23px;
 	color:#000;
@@ -3682,3 +3682,81 @@ label{
 .admin-header-links {
     text-align: center;
 }
+.ui-autocomplete {
+	width: 285px !important;
+	border: 1px solid #ddd;
+	border-top: none;
+	overflow: hidden;
+	background-color: #fff;
+	text-align: left;
+	/*override jQuery UI styles, do not delete doubled properties*/
+	border-radius: 0;
+	padding: 0;
+	font: normal 14px Arial, Helvetica, sans-serif;
+}
+.ui-autocomplete li {
+	border-top: 1px solid #ddd;
+}
+.ui-autocomplete li:first-child {
+	border-top: none;
+}
+.ui-autocomplete a {
+	display: block;
+	padding: 15px;
+	font-size: 14px;
+	/*override jQuery UI styles, do not delete doubled properties*/
+	margin: 0 !important;
+	border: none !important;
+	border-radius: 0 !important;
+	background: none !important;
+	padding: 15px !important;
+	line-height: normal !important;
+	color: #777 !important;
+}
+.ui-autocomplete a:hover,
+.ui-autocomplete a.ui-state-focus {
+	background-color: #f6f6f6 !important;
+}
+.ui-autocomplete img {
+	display: none;
+	min-width: 20px;
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+}
+
+.bar-notification .content {
+    color: #fff;
+    font-size: 13px;
+}
+.bar-notification .close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 32px;
+	height: 32px;
+	margin: 7px;
+	background: #fff url('images/close.png') center no-repeat;
+	cursor: pointer;
+}
+
+.message-error,
+.field-validation-error,
+.username-not-available-status,
+.poll-vote-error, .password-error {
+	display: block;
+	/*text-align: center;*/
+	font-size: 13px;
+	color: #e4434b;
+    margin-top: 5px;
+}
+.field-validation-valid {
+	display: block;
+	/*text-align: center;*/
+	font-size: 13px;
+	color: #4cb17c;
+}
+
+select[name='DateOfBirthDay'],select[name='DateOfBirthMonth'],select[name='DateOfBirthYear'] {
+    width: auto;
+}
+#login .field-validation-error,#login .validation-summary-errors{ text-align: center;}

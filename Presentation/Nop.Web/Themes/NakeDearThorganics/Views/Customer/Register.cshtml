@@ -1,7 +1,7 @@
 ﻿@model RegisterModel
 @using Nop.Web.Models.Customer;
 @{
-    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
 
     //title
     Html.AddTitleParts(T("PageTitle.Register").Text);
@@ -36,340 +36,463 @@
         });
     </script>
 }
-@using (Html.BeginForm())
+@using (Html.BeginForm(null, null, FormMethod.Post, new {@class = "form-horizontal", id = "register", enctype = "multipart/form-data"}))
 {
     @Html.AntiForgeryToken()
-    <div class="page registration-page">
-        <div class="page-title">
-            <h1>@T("Account.Register")</h1>
-        </div>
-        <div class="page-body">
-            @{
-                var validationSummary = Html.ValidationSummary(true);
-            }
-            @if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
-            {
-                <div class="message-error">@validationSummary</div>
-            }
-            @Html.Partial("_ExternalAuthentication.AssociateMessage")
-            <div class="fieldset">
-                <div class="title">
-                    <strong>@T("Account.YourPersonalDetails")</strong>
-                </div>
-                <div class="form-fields">
+    <h1>@T("Account.Register")</h1>
+    var validationSummary = Html.ValidationSummary(true);
+    if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
+    {
+        <div class="message-error">@validationSummary</div>
+    }
+    @Html.Partial("_ExternalAuthentication.AssociateMessage")
+    <div class="box-container">
+        <h2>@T("Account.YourPersonalDetails")</h2>
+        <div class="content">
+            <table class="form">
+                <tbody>
                     @if (Model.GenderEnabled)
                     {
-                        <div class="inputs">
-                            <label>@T("Account.Fields.Gender"):</label>
-                            <div class="gender">
-                                <span class="male">
-                                    @Html.RadioButton("Gender", "M", (Model.Gender == "M"), new { id = "gender-male" })
-                                    <label class="forcheckbox" for="gender-male">@T("Account.Fields.Gender.Male")</label>
-                                </span>
-                                <span class="female">
-                                    @Html.RadioButton("Gender", "F", (Model.Gender == "F"), new { id = "gender-female" })
-                                    <label class="forcheckbox" for="gender-female">@T("Account.Fields.Gender.Female")</label>
-                                </span>
-                            </div>
-                        </div>
+                        <tr>
+                            <td>
+                                <div class="control-group">
+                                    <label class="control-label" for="newsletter">@T("Account.Fields.Gender"):</label>
+                                    <div class="controls">
+                                        <label class="radio inline">
+                                            @Html.RadioButton("Gender", "M", (Model.Gender == "M"), new {id = "gender-male"})
+                                            <label class="forcheckbox" for="gender-male">@T("Account.Fields.Gender.Male")</label>
+                                        </label>
+                                        <label class="radio inline">
+                                            @Html.RadioButton("Gender", "F", (Model.Gender == "F"), new {id = "gender-female"})
+                                            <label class="forcheckbox" for="gender-female">@T("Account.Fields.Gender.Female")</label>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
                     }
-                    <div class="inputs">
-                        @Html.LabelFor(model => model.FirstName, new { }, ":")
-                        @Html.EditorFor(model => model.FirstName)
-                        @Html.RequiredHint()
-                        @Html.ValidationMessageFor(model => model.FirstName)
-                    </div>
-                    <div class="inputs">
-                        @Html.LabelFor(model => model.LastName, new { }, ":")
-                        @Html.EditorFor(model => model.LastName)
-                        @Html.RequiredHint()
-                        @Html.ValidationMessageFor(model => model.LastName)
-                    </div>
+                    <tr>
+                        <td>
+                            <div class="control-group">
+                                @Html.LabelFor(model => model.FirstName, new {@class = "control-label"}, ":")
+                                <div class="controls">
+                                    @Html.EditorFor(model => model.FirstName)
+                                    @Html.RequiredHint()
+                                    @Html.ValidationMessageFor(model => model.FirstName)
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="control-group">
+                                @Html.LabelFor(model => model.LastName, new {@class = "control-label"}, ":")
+                                <div class="controls">
+                                    @Html.EditorFor(model => model.LastName)
+                                    @Html.RequiredHint()
+                                    @Html.ValidationMessageFor(model => model.LastName)
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                     @if (Model.DateOfBirthEnabled)
                     {
-                        <div class="inputs date-of-birth">
-                            <label>@T("Account.Fields.DateOfBirth"):</label>
-                            @Html.DatePickerDropDowns(Html.FieldNameFor(x => x.DateOfBirthDay),
-                                Html.FieldNameFor(x => x.DateOfBirthMonth),
-                                Html.FieldNameFor(x => x.DateOfBirthYear),
-                                DateTime.Now.Year - 110,
-                                DateTime.Now.Year,
-                                Model.DateOfBirthDay,
-                                Model.DateOfBirthMonth,
-                                Model.DateOfBirthYear)
-                            @if (Model.DateOfBirthRequired)
-                            {
-                                @Html.RequiredHint()
-                            }
-                            @Html.ValidationMessageFor(model => model.DateOfBirthDay)
-                            @Html.ValidationMessageFor(model => model.DateOfBirthMonth)
-                            @Html.ValidationMessageFor(model => model.DateOfBirthYear)
-                        </div>
-                    }
-                    <div class="inputs">
-                        @Html.LabelFor(model => model.Email, new { }, ":")
-                        @Html.EditorFor(model => model.Email)
-                        @Html.RequiredHint()
-                        @Html.ValidationMessageFor(model => model.Email)
-                    </div>
-                    @if (Model.UsernamesEnabled)
-                    {
-                        <div class="inputs">
-                            @Html.LabelFor(model => model.Username, new { }, ":")
-                            @Html.EditorFor(model => model.Username)
-                            @Html.RequiredHint()
-                            @Html.ValidationMessageFor(model => model.Username)
-                            @if (Model.CheckUsernameAvailabilityEnabled)
-                            {
-                                @Html.Partial("_CheckUsernameAvailability")
-                            }
-                        </div>
+                        <tr>
+                            <td>
+                                <div class="control-group">
+                                    @Html.LabelFor(model => model.DateOfBirthDay, new {@class = "control-label"}, ":")
+                                    <div class="controls">
+                                        @Html.DatePickerDropDowns(Html.FieldNameFor(x => x.DateOfBirthDay),
+                                            Html.FieldNameFor(x => x.DateOfBirthMonth),
+                                            Html.FieldNameFor(x => x.DateOfBirthYear),
+                                            DateTime.Now.Year - 110,
+                                            DateTime.Now.Year,
+                                            Model.DateOfBirthDay,
+                                            Model.DateOfBirthMonth,
+                                            Model.DateOfBirthYear)
+                                        @if (Model.DateOfBirthRequired)
+                                        {
+                                            @Html.RequiredHint()
+                                        }
+                                        @Html.ValidationMessageFor(model => model.DateOfBirthDay)
+                                        @Html.ValidationMessageFor(model => model.DateOfBirthMonth)
+                                        @Html.ValidationMessageFor(model => model.DateOfBirthYear)
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 
                     }
-                </div>
-            </div>
-            @if (Model.CompanyEnabled || Model.DisplayVatNumber)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.CompanyDetails")</strong>
-                    </div>
-                    <div class="form-fields">
+                    <tr>
+                        <td>
+                            <div class="control-group">
+                                @Html.LabelFor(model => model.Email, new {@class = "control-label"}, ":")
+                                <div class="controls">
+                                    @Html.EditorFor(model => model.Email)
+                                    @Html.RequiredHint()
+                                    @Html.ValidationMessageFor(model => model.Email)
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    @if (Model.UsernamesEnabled)
+                    {
+                        <tr>
+                            <td>
+                                <div class="control-group">
+                                    @Html.LabelFor(model => model.Username, new {@class = "control-label"}, ":")
+                                    <div class="controls">
+                                        @Html.EditorFor(model => model.Username)
+                                        @Html.RequiredHint()
+                                        @Html.ValidationMessageFor(model => model.Username)
+                                        @if (Model.CheckUsernameAvailabilityEnabled)
+                                        {
+                                            @Html.Partial("_CheckUsernameAvailability")
+                                        }
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+        @if (Model.CompanyEnabled || Model.DisplayVatNumber)
+        {
+            <h2>@T("Account.CompanyDetails")</h2>
+            <div class="content">
+                <table class="form">
+                    <tbody>
                         @if (Model.CompanyEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.Company, new { }, ":")
-                                @Html.EditorFor(model => model.Company)
-                                @if (Model.CompanyRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.Company)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.Company, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.Company)
+                                            @if (Model.CompanyRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.Company)
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
                         }
                         @if (Model.DisplayVatNumber)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.VatNumber, new { }, ":")
-                                @Html.EditorFor(model => model.VatNumber)
-                                <span class="vat-note"><em>@T("Account.Fields.VatNumber.Note")</em></span>
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.VatNumber, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.VatNumber)
+                                            <span class="vat-note"><em>@T("Account.Fields.VatNumber.Note")</em></span>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
                         }
-                    </div>
-                </div>
-            }
-            @if (Model.StreetAddressEnabled || Model.StreetAddress2Enabled || Model.ZipPostalCodeEnabled
-            || Model.CityEnabled || Model.CountryEnabled)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.YourAddress")</strong>
-                    </div>
-                    <div class="form-fields">
+                    </tbody>
+                </table>
+            </div>
+        }
+        @if (Model.StreetAddressEnabled || Model.StreetAddress2Enabled || Model.ZipPostalCodeEnabled
+             || Model.CityEnabled || Model.CountryEnabled)
+        {
+            <h2>@T("Account.YourAddress")</h2>
+            <div class="content">
+                <table class="form">
+                    <tbody>
                         @if (Model.StreetAddressEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.StreetAddress, new { }, ":")
-                                @Html.EditorFor(model => model.StreetAddress)
-                                @if (Model.StreetAddressRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.StreetAddress)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.StreetAddress, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.StreetAddress)
+                                            @if (Model.StreetAddressRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.StreetAddress)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         }
                         @if (Model.StreetAddress2Enabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.StreetAddress2, new { }, ":")
-                                @Html.EditorFor(model => model.StreetAddress2)
-                                @if (Model.StreetAddress2Required)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.StreetAddress2)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.StreetAddress2Enabled, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.StreetAddress2Enabled)
+                                            @if (Model.StreetAddress2Required)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.StreetAddress2Enabled)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         }
                         @if (Model.ZipPostalCodeEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.ZipPostalCode, new { }, ":")
-                                @Html.EditorFor(model => model.ZipPostalCode)
-                                @if (Model.ZipPostalCodeRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.ZipPostalCode)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.ZipPostalCode, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.ZipPostalCode)
+                                            @if (Model.ZipPostalCodeRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.ZipPostalCode)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         }
                         @if (Model.CityEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.City, new { }, ":")
-                                @Html.EditorFor(model => model.City)
-                                @if (Model.CityRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.City)
-                            </div>
-                        }
-                        @if (Model.CountryEnabled)
-                        {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.CountryId, new { }, ":")
-                                @Html.DropDownList("CountryId", Model.AvailableCountries)
-                                @if (Model.CountryRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.CountryId)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.CityEnabled, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.CityEnabled)
+                                            @if (Model.CityRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.CityEnabled)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         }
                         @if (Model.CountryEnabled && Model.StateProvinceEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.StateProvinceId, new { }, ":")
-                                @Html.DropDownList("StateProvinceId", Model.AvailableStates)
-                                @if (Model.StateProvinceRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.StateProvinceId)
-                                <span id="states-loading-progress" style="display: none;" class="please-wait">@T("Common.Wait...")</span>
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.StateProvinceId, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.DropDownList("StateProvinceId", Model.AvailableStates)
+                                            @if (Model.StateProvinceRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.StateProvinceId)
+                                            <span id="states-loading-progress" style="display: none;" class="please-wait">@T("Common.Wait...")</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         }
-                    </div>
-                </div>
-            }
-            @if (Model.PhoneEnabled || Model.FaxEnabled)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.YourContactInformation")</strong>
-                    </div>
-                    <div class="form-fields">
+                        @if (Model.StreetAddress2Enabled)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.StreetAddress2Enabled, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.StreetAddress2Enabled)
+                                            @if (Model.StreetAddressRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.StreetAddress2Enabled)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        @if (Model.PhoneEnabled || Model.FaxEnabled)
+        {
+            <h2>@T("Account.YourContactInformation")</h2>
+            <div class="content">
+                <table class="form">
+                    <tbody>
                         @if (Model.PhoneEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.Phone, new { }, ":")
-                                @Html.EditorFor(model => model.Phone)
-                                @if (Model.PhoneRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.Phone)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.Phone, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.Phone)
+                                            @if (Model.PhoneRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.Phone)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         }
                         @if (Model.FaxEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.Fax, new { }, ":")
-                                @Html.EditorFor(model => model.Fax)
-                                @if (Model.FaxRequired)
-                                {
-                                    @Html.RequiredHint()
-                                }
-                                @Html.ValidationMessageFor(model => model.Fax)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.Fax, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.Fax)
+                                            @if (Model.FaxRequired)
+                                            {
+                                                @Html.RequiredHint()
+                                            }
+                                            @Html.ValidationMessageFor(model => model.Fax)
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
                         }
-                    </div>
-                </div>
-            }
-            @if (Model.NewsletterEnabled || Model.CustomerAttributes.Count > 0)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.Options")</strong>
-                    </div>
-                    <div class="form-fields">
+                    </tbody>
+                </table>
+            </div>
+        }
+        @if (Model.NewsletterEnabled || Model.CustomerAttributes.Count > 0)
+        {
+            <h2>@T("Account.Options")</h2>
+            <div class="content">
+                <table class="form">
+                    <tbody>
                         @if (Model.NewsletterEnabled)
                         {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.Newsletter, new { }, ":")
-                                @Html.EditorFor(model => model.Newsletter)
-                                @Html.ValidationMessageFor(model => model.Newsletter)
-                            </div>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        @Html.LabelFor(model => model.Newsletter, new {@class = "control-label"}, ":")
+                                        <div class="controls">
+                                            @Html.EditorFor(model => model.Newsletter)
+                                            @Html.ValidationMessageFor(model => model.Newsletter)
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
                         }
                         @if (Model.CustomerAttributes.Count > 0)
                         {
                             @Html.Partial("_CustomerAttributes", Model.CustomerAttributes)
                         }
-                    </div>
-                </div>
-            }
-            @if (Model.AllowCustomersToSetTimeZone)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.Preferences")</strong>
-                    </div>
-                    <div class="form-fields">
-                        @if (Model.AllowCustomersToSetTimeZone)
-                        {
-                            <div class="inputs">
-                                @Html.LabelFor(model => model.TimeZoneId, new { }, ":")
-                                @Html.DropDownList("TimeZoneId", Model.AvailableTimeZones)
-                                @Html.ValidationMessageFor(model => model.TimeZoneId)
+                    </tbody>
+                </table>
+            </div>
+        }
+        @if (Model.AllowCustomersToSetTimeZone)
+        {
+            <h2>@T("Account.Preferences")</h2>
+            <div class="content">
+                <table class="form">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="control-group">
+                                    @Html.LabelFor(model => model.TimeZoneId, new {@class = "control-label"}, ":")
+                                    <div class="controls">
+                                        @Html.DropDownList("TimeZoneId", Model.AvailableTimeZones)
+                                        @Html.ValidationMessageFor(model => model.Newsletter)
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        }
+        <h2>@T("Account.YourPassword")</h2>
+        <div class="content">
+            <table class="form">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="control-group">
+                                @Html.LabelFor(model => model.Password, new {@class = "control-label"}, ":")
+                                <div class="controls">
+                                    @Html.EditorFor(model => model.Password)
+                                    @Html.RequiredHint()
+                                    @Html.ValidationMessageFor(model => model.Password)
+                                </div>
+
                             </div>
-                        }
-                    </div>
-                </div>
-            }
-            <div class="fieldset">
-                <div class="title">
-                    <strong>@T("Account.YourPassword")</strong>
-                </div>
-                <div class="form-fields">
-                    <div class="inputs">
-                        @Html.LabelFor(model => model.Password, new { }, ":")
-                        @Html.EditorFor(model => model.Password)
-                        @Html.RequiredHint()
-                        @Html.ValidationMessageFor(model => model.Password)
-                    </div>
-                    <div class="inputs">
-                        @Html.LabelFor(model => model.ConfirmPassword, new { }, ":")
-                        @Html.EditorFor(model => model.ConfirmPassword)
-                        @Html.RequiredHint()
-                        @Html.ValidationMessageFor(model => model.ConfirmPassword)
-                    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="control-group">
+                                @Html.LabelFor(model => model.ConfirmPassword, new {@class = "control-label"}, ":")
+                                <div class="controls">
+                                    @Html.EditorFor(model => model.ConfirmPassword)
+                                    @Html.RequiredHint()
+                                    @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
                     @if (Model.DisplayCaptcha)
                     {
-                        <div class="captcha-box">
-                            @Html.Raw(Html.GenerateCaptcha())
-                        </div>
+                        <tr>
+                            <td>
+                                <div class="control-group">
+                                    @Html.Raw(Html.GenerateCaptcha())
+                                </div>
+                            </td>
+                        </tr>
                     }
                     @if (Model.HoneypotEnabled)
                     {
                         @Html.Raw(Html.GenerateHoneypotInput())
                     }
-                </div>
-            </div>
-            @if (Model.AcceptPrivacyPolicyEnabled)
-            {
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        $('#register-button').click(function () {
-                            if ($('#accept-privacy-policy').is(':checked')) {
-                                //do some stuff
-                                return true;
-                            }
-                            else {
-                                //just show validation errors, dont post
-                                alert('@Html.Raw(HttpUtility.JavaScriptStringEncode(T("Account.Fields.AcceptPrivacyPolicy.Required").Text))');
-                                return false;
-                            }
-                        });
+                </tbody>
+            </table>
+        </div>
+        @if (Model.AcceptPrivacyPolicyEnabled)
+        {
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#register-button').click(function() {
+                        if ($('#accept-privacy-policy').is(':checked')) {
+                            //do some stuff
+                            return true;
+                        } else {
+                            //just show validation errors, dont post
+                            alert('@Html.Raw(HttpUtility.JavaScriptStringEncode(T("Account.Fields.AcceptPrivacyPolicy.Required").Text))');
+                            return false;
+                        }
                     });
-                </script>
-                <div class="accept-privacy-policy">
-                    <input id="accept-privacy-policy" type="checkbox" name="accept-privacy-policy" />
-                    <label for="accept-privacy-policy">@T("Account.Fields.AcceptPrivacyPolicy")</label>
-                    <span class="read" onclick="javascript:OpenWindow('@Url.RouteUrl("TopicPopup", new { SystemName = "privacyinfo" })', 450, 500, true)">@T("Account.Fields.AcceptPrivacyPolicy.Read")</span>
-                </div>
-            }
-            <div class="buttons">
-                <input type="submit" id="register-button" class="button-1 register-next-step-button" value="@T("Account.Register.Button")" name="register-button" />
+                });
+            </script>
+            <div class="accept-privacy-policy">
+                <input id="accept-privacy-policy" type="checkbox" name="accept-privacy-policy" />
+                <label for="accept-privacy-policy">@T("Account.Fields.AcceptPrivacyPolicy")</label>
+                <span class="read" onclick=" javascript:OpenWindow('@Url.RouteUrl("TopicPopup", new {SystemName = "privacyinfo"})', 450, 500, true) ">@T("Account.Fields.AcceptPrivacyPolicy.Read")</span>
+            </div>
+        }
+        <div class="buttons">
+            <div class="right">
+                <a onclick=" $('#register').submit(); " class="button"><span>Continue</span></a>
             </div>
         </div>
     </div>
