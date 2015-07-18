@@ -1,37 +1,159 @@
 ﻿@model CatalogPagingFilteringModel
 @using Nop.Web.Models.Catalog;
 
-<div class="product-selectors">
+
+@*sorting*@
+@if (Model.AllowProductSorting)
+{
+    <div class="sort">
+        <b>@T("Catalog.OrderBy")</b>
+        @Html.DropDownList("products-orderby", Model.AvailableSortOptions, new { onchange = "setLocation(this.value);" })
+    </div>
+}
+
+    @*page size*@
+    @if (Model.AllowCustomersToSelectPageSize)
+    {
+        <div class="limit">
+            <b>@T("Catalog.PageSize")</b>
+            @Html.DropDownList("products-pagesize", Model.PageSizeOptions, new { onchange = "setLocation(this.value);" })
+            <span>@T("Catalog.PageSize.PerPage")</span>
+        </div>
+    }
     @*view mode*@
     @if (Model.AllowProductViewModeChanging)
     {
-        <div class="product-viewmode">
+        <div class="display">
             <span>@T("Catalog.ViewMode")</span>
             @if (Model.AvailableViewModes.Count > 1)
             {
                 var gridMode = Model.AvailableViewModes[0];
                 var listMode = Model.AvailableViewModes[1];
 
-                <a class="viewmode-icon grid @if(gridMode.Selected){<text>selected</text>}" href="@gridMode.Value" title="@gridMode.Text">@gridMode.Text</a>
-                <a class="viewmode-icon list @if (listMode.Selected){<text>selected</text>}" href="@listMode.Value" title="@listMode.Text">@listMode.Text</a>
+                @*<a class="viewmode-icon grid @if(gridMode.Selected){<text>selected</text>}" href="@gridMode.Value" title="@gridMode.Text">@gridMode.Text</a>
+                <a class="viewmode-icon list @if (listMode.Selected){<text>selected</text>}" href="@listMode.Value" title="@listMode.Text">@listMode.Text</a>*@
+                <div class="display"><b>Display:</b> List  <a onclick="display('grid');">@gridMode.Text</a></div>
             }
         </div>
     }
-    @*sorting*@
-    @if (Model.AllowProductSorting)
-    {
-        <div class="product-sorting">
-            <span>@T("Catalog.OrderBy")</span>
-            @Html.DropDownList("products-orderby", Model.AvailableSortOptions, new { onchange = "setLocation(this.value);" })
-        </div>
-    }
-    @*page size*@
-    @if (Model.AllowCustomersToSelectPageSize)
-    {
-        <div class="product-page-size">
-            <span>@T("Catalog.PageSize")</span>
-            @Html.DropDownList("products-pagesize", Model.PageSizeOptions, new { onchange = "setLocation(this.value);" })
-            <span>@T("Catalog.PageSize.PerPage")</span>
-        </div>
-    }
-</div>
+
+
+<script type="text/javascript">
+<!--
+function display(view) {
+	if (view == 'list') {
+		$('.product-grid ').attr('class', 'product-list');
+		$('.product-list ul').removeClass('row');
+		$('.product-list ul li').removeClass('span3');
+		$('.product-list ul li').each(function(index, element) {
+			html = '';
+					html += '<div class="row">';
+			var image = $(element).find('.image').html();
+
+			if (image != null) {
+				html += '<div class="image span2">' + image + '</div>';
+			}
+			html += '<div class="left span7">';
+				html += '<div class="name">' + $(element).find('.name').html() + '</div>';
+				html += '<div class="description">' + $(element).find('.description').html() + '</div>';
+				var price = $(element).find('.price').html();
+				if (price != null) {
+					html += '<div class="price">' + price  + '</div>';
+				}
+				html += '<div class="cart-button">';
+				html += '<div class="cart">' + $(element).find('.cart').html() + '</div>';
+				html += '<div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
+				html += '<div class="compare">' + $(element).find('.compare').html() + '</div>';
+				html += '<div class="clear">' + $(element).find('.clear').html() + '</div>';
+				html += '</div>';
+				var rating = $(element).find('.rating').html();
+				if (rating != null) {
+					html += '<div class="rating">' + rating + '</div>';
+				}
+				html += '</div>';
+				html += '</div>';
+
+
+
+			$(element).html(html);
+		});
+
+		$('.display').html('<b>Display:</b> <div id="list_b"><i class="icon-list"></i></div> <a id="grid_a" onclick="display(\'grid\');"><i class="icon-th"></i></a>');
+
+		$.totalStorage('display', 'list');
+	} else {
+		$('.product-list').attr('class', 'product-grid');
+		$('.product-grid ul').addClass('row');
+		$('.product-grid ul li').addClass('span3');
+		$('.product-grid ul li').each(function(index, element) {
+			html = '';
+
+			var price = $(element).find('.price').html();
+			var image = $(element).find('.image').html();
+			var sale = $(element).find('.sale').html();
+
+			if (image != null) {
+				html += '<div class="image">'+ image + '</div>';
+				if (sale != null) {
+					html += '<span class="sale">'+ sale + '</span>';
+				}
+			}
+			html += '<div class="left">';
+
+			if ($('.container').width() > 723) {
+				(function($){$.fn.equalHeights=function(minHeight,maxHeight){tallest=(minHeight)?minHeight:0;this.each(function(){if($(this).height()>tallest){tallest=$(this).height()}});if((maxHeight)&&tallest>maxHeight)tallest=maxHeight;return this.each(function(){$(this).height(tallest)})}})(jQuery)
+				$(window).load(function(){
+				if($(".maxheight-prod").length){
+				$(".maxheight-prod").equalHeights()}
+				});
+			};
+
+			html += '<div class="name maxheight-prod">' + $(element).find('.name').html() + '</div>';
+
+			html += '<div class="description">' + $(element).find('.description').html() + '</div>';
+			if (price != null) {
+				html += '<div class="price">' + price  + '</div>';
+			}
+			html += '<div class="cart-button">';
+			html += '<div class="cart">' + $(element).find('.cart').html() + '</div>';
+			html += '<div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
+			html += '<div class="compare">' + $(element).find('.compare').html() + '</div>';
+			html += '<div class="clear">' + $(element).find('.clear').html() + '</div>';
+			html += '</div>';
+			var rating = $(element).find('.rating').html();
+
+			if (rating != null) {
+				html += '<div class="rating">' + rating + '</div>';
+			}
+
+			html += '</div>';
+			$(element).html(html);
+		});
+
+		$('.display').html('<b>Display:</b> <a id="list_a" onclick="display(\'list\');"><i class="icon-list"></i></a>  <div id="grid_b"><i class="icon-th"></i></i></div>');
+
+		$.totalStorage('display', 'grid');
+	}
+	if ($('body').width() > 940) {
+	// tooltip demo
+		$('.tooltip-toggle').tooltip({
+		selector: "a[data-toggle=tooltip]"
+		})
+		$('.tooltip-1').tooltip({
+			placement:'bottom'
+		})
+		$('.tooltip-2').tooltip({
+			placement:'top'
+		})
+		}
+
+}
+
+view = $.totalStorage('display');
+
+if (view) {
+	display(view);
+} else {
+	display('grid');
+}
+//--></script>

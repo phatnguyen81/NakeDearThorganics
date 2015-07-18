@@ -4,7 +4,64 @@
     Html.AddScriptParts("~/Scripts/jquery.magnific-popup.js");
     Html.AddCssFileParts("~/Content/magnific-popup/magnific-popup.css");
 }
-<div class="gallery">
+
+@if (Model.PictureModels.Count > 0)
+{
+    <div id="full_gallery">
+        <ul id="gallery">
+            @foreach (var picture in Model.PictureModels)
+            {
+                <li>
+                    <a href="@picture.FullSizeImageUrl" data-something="something" data-another-thing="anotherthing">
+                        <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
+                    </a>
+                </li>
+            }
+        </ul>
+        
+    </div>
+    <div id="default_gallery" class="left spacing">
+        @foreach (var picture in Model.PictureModels)
+        {
+            <div class="zoom-top">
+                <a href="@picture.FullSizeImageUrl" title="@Model.Name" data-gal="prettyPhoto[gallery1]">
+                    <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
+                </a>
+            </div>
+        }
+     
+        <div class="image">
+            <a href="@Model.PictureModels[0].FullSizeImageUrl" title="@Model.Name" class='cloud-zoom' id='zoom1' rel="position: 'right'">
+                <img src="@Model.PictureModels[0].FullSizeImageUrl" alt="@Model.PictureModels[0].AlternateText" title="@Model.PictureModels[0].Title" />
+            </a>
+            <a href="@Model.PictureModels[0].FullSizeImageUrl" title="@Model.Name" class='cloud-zoom' id='zoom1' rel="position: 'right'">
+            </a>
+        </div>
+        <div class="image-additional">
+            <ul id="image-additional">
+                @foreach (var picture in Model.PictureModels)
+                {
+                    <li>
+                        <a href="@picture.FullSizeImageUrl" title="@Model.Name" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: '@picture.ImageUrl' ">
+                            <img src="@picture.FullSizeImageUrl" title="@picture.Title" alt="@picture.AlternateText" />
+                        </a>
+                    </li>
+                }
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        var myPhotoSwipe = $("#gallery a").photoSwipe({ enableMouseWheel: false, enableKeyboard: false, captionAndToolbarAutoHideDelay: 0 });
+    });
+    </script>
+}
+
+
+
+@*<div class="gallery">
     <div class="picture">
         @if (Model.DefaultPictureZoomEnabled)
         {
@@ -62,4 +119,4 @@
             });
         </script>
     }
-</div>
+</div>*@

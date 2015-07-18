@@ -2009,6 +2009,7 @@
     <Content Include="Themes\NakeDearThorganics\Scripts\jquery\jquery-1.7.1.min.js" />
     <Content Include="Themes\NakeDearThorganics\Scripts\jquery\jquery.cycle.js" />
     <Content Include="Themes\NakeDearThorganics\Scripts\jquery\jquery.jcarousel.min.js" />
+    <Content Include="Themes\NakeDearThorganics\Scripts\jquery\jquery.total-storage.min.js" />
     <Content Include="Themes\NakeDearThorganics\Scripts\jquery\nivo-slider\jquery.nivo.slider.pack.js" />
     <Content Include="Themes\NakeDearThorganics\Scripts\jquery\tabs.js" />
     <Content Include="Themes\NakeDearThorganics\Scripts\jquery\ui\external\jquery.cookie.js" />
@@ -2275,6 +2276,7 @@
     <Content Include="Themes\NakeDearThorganics\Views\Shared\LanguageAttributes.cshtml" />
     <Content Include="Themes\NakeDearThorganics\Views\Shared\OldInternetExplorerWarning.cshtml" />
     <Content Include="Themes\NakeDearThorganics\Views\Shared\_SwipeMenu.cshtml" />
+    <Content Include="Themes\NakeDearThorganics\Views\Shared\_ProductBoxGridLine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

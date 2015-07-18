@@ -5,7 +5,7 @@
 @using Nop.Services.Localization;
 @using Nop.Web.Models.Catalog;
 @{
-    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
 
     //title, meta
     Html.AddTitleParts(!String.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
@@ -51,6 +51,19 @@
     @Html.Partial("_ProductBreadcrumb", Model.Breadcrumb)
 }
 @Html.Widget("productdetails_after_breadcrumb", Model.Id)
+<div class="product-info">
+    <div class="row">
+        <div class="span3">
+            <h1 class="view">@Model.Name</h1>
+            @Html.Widget("productdetails_before_pictures", Model.Id)
+            <!--product pictures-->
+            @Html.Partial("_ProductDetailsPictures", Model)
+            @Html.Widget("productdetails_after_pictures", Model.Id)
+        </div>
+    </div>
+</div>
+
+
 <div class="page product-details-page">
     <div class="page-body">
         @Html.Widget("productdetails_top", Model.Id)
@@ -58,10 +71,9 @@
         {
             <div itemscope itemtype="http://schema.org/Product" data-productid="@Model.Id">
                 <div class="product-essential">
-                    @Html.Widget("productdetails_before_pictures", Model.Id)
-                    <!--product pictures-->
-                    @Html.Partial("_ProductDetailsPictures", Model)
-                    @Html.Widget("productdetails_after_pictures", Model.Id)
+                    
+                    
+                    
                     <div class="overview">
                         <div class="product-name">
                             <h1 itemprop="name">
