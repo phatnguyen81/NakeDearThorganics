@@ -5,11 +5,11 @@
     <div class="manufacturers">
         @if (Model.Count == 1)
         {
-            <span class="label">@T("Products.Manufacturer"):</span>
+            <span>@T("Products.Manufacturer"):</span>
         }
         else
         {
-            <span class="label">@T("Products.Manufacturers"):</span>
+            <span>@T("Products.Manufacturers"):</span>
         }
         <span class="value">
             @for (int i = 0; i < Model.Count; i++)

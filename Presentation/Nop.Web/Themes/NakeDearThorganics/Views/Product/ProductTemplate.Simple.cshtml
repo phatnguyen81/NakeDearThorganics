@@ -60,6 +60,51 @@
             @Html.Partial("_ProductDetailsPictures", Model)
             @Html.Widget("productdetails_after_pictures", Model.Id)
         </div>
+        <div class="span6">
+            <h1 itemprop="name">
+                @Model.Name
+            </h1>
+            <div class="description">
+                <div class="product-section">
+                    @Html.Partial("_ProductManufacturers", Model.ProductManufacturers)
+                    @Html.Partial("_SKU_Man_GTIN_Ven", Model)
+                    @Html.Partial("_Availability", Model)
+                </div>
+            </div>
+            <div class="price">
+                @{
+                    var dataDictPrice = new ViewDataDictionary();
+                    dataDictPrice.TemplateInfo.HtmlFieldPrefix = string.Format("price_{0}", Model.Id);
+                    @Html.Partial("_ProductPrice", Model.ProductPrice, dataDictPrice)
+
+                    @Html.Partial("_ProductTierPrices", Model.TierPrices)
+                }
+            </div>
+            <div class="cart">
+                @{
+
+                    var dataDictAddToCart = new ViewDataDictionary();
+                    dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
+                    @Html.Partial("_AddToCart", Model.AddToCart, dataDictAddToCart)
+                }
+                @Html.Widget("productdetails_inside_overview_buttons_before", Model.Id)
+                <!--wishlist, compare, email a friend-->
+                <div class="overview-buttons">
+                    @Html.Widget("productdetails_inside_overview_buttons_before", Model.Id)
+                    @{
+                        var dataDictAddToWishlist = new ViewDataDictionary();
+                        dataDictAddToWishlist.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
+                        @Html.Partial("_AddToWishlist", Model.AddToCart, dataDictAddToWishlist)
+                    }
+                    @Html.Partial("_CompareProductsButton", Model)
+                    @Html.Partial("_ProductEmailAFriendButton", Model)
+                    @Html.Widget("prod" +
+                                 "uctdetails_inside_overview_buttons_after", Model.Id)
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
     </div>
 </div>
 
@@ -117,30 +162,7 @@
                         dataDictRental.TemplateInfo.HtmlFieldPrefix = string.Format("rental_{0}", Model.Id);
                             @Html.Partial("_RentalInfo", Model, dataDictRental)
                         }
-                        <!--price & add to cart-->
-                        @{
-                        var dataDictPrice = new ViewDataDictionary();
-                        dataDictPrice.TemplateInfo.HtmlFieldPrefix = string.Format("price_{0}", Model.Id);
-                            @Html.Partial("_ProductPrice", Model.ProductPrice, dataDictPrice)
-                            
-                        @Html.Partial("_ProductTierPrices", Model.TierPrices)
-
-                        var dataDictAddToCart = new ViewDataDictionary();
-                        dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
-                            @Html.Partial("_AddToCart", Model.AddToCart, dataDictAddToCart)                    
-                        }
-                        <!--wishlist, compare, email a friend-->
-                        <div class="overview-buttons">
-                            @Html.Widget("productdetails_inside_overview_buttons_before", Model.Id)
-                            @{
-                                var dataDictAddToWishlist = new ViewDataDictionary();
-                                dataDictAddToWishlist.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
-                                @Html.Partial("_AddToWishlist", Model.AddToCart, dataDictAddToWishlist)
-                            }
-                            @Html.Partial("_CompareProductsButton", Model)
-                            @Html.Partial("_ProductEmailAFriendButton", Model)
-                            @Html.Widget("productdetails_inside_overview_buttons_after", Model.Id)
-                        </div>
+                     
                         @Html.Partial("_ShareButton", Model)
                         @Html.Widget("productdetails_overview_bottom", Model.Id)
                     </div>

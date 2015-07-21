@@ -34,15 +34,13 @@
             <a href="@Model.PictureModels[0].FullSizeImageUrl" title="@Model.Name" class='cloud-zoom' id='zoom1' rel="position: 'right'">
                 <img src="@Model.PictureModels[0].FullSizeImageUrl" alt="@Model.PictureModels[0].AlternateText" title="@Model.PictureModels[0].Title" />
             </a>
-            <a href="@Model.PictureModels[0].FullSizeImageUrl" title="@Model.Name" class='cloud-zoom' id='zoom1' rel="position: 'right'">
-            </a>
         </div>
         <div class="image-additional">
             <ul id="image-additional">
                 @foreach (var picture in Model.PictureModels)
                 {
                     <li>
-                        <a href="@picture.FullSizeImageUrl" title="@Model.Name" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: '@picture.ImageUrl' ">
+                        <a href="@picture.FullSizeImageUrl" title="@Model.Name" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: '@picture.FullSizeImageUrl' ">
                             <img src="@picture.FullSizeImageUrl" title="@picture.Title" alt="@picture.AlternateText" />
                         </a>
                     </li>
