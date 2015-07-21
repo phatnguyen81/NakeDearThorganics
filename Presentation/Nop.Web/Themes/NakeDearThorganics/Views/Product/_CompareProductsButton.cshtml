@@ -5,7 +5,14 @@
 }
 @if (Model.CompareProductsEnabled)
 {
-    <div class="compare-products">
+    @*<div class="compare-products">
         <input type="button" value="@T("Products.Compare.AddToCompareList")" class="button-2 add-to-compare-list-button" onclick="AjaxCart.addproducttocomparelist('@addtocomparelink');return false;" />
+    </div>*@
+
+    <div class="compare">
+        <a class="tooltip-1" onclick="AjaxCart.addproducttocomparelist('@addtocomparelink');return false;" title="@T("Products.Compare.AddToCompareList")">
+            <i class="icon-bar-chart"></i><span>@T("Products.Compare.AddToCompareList")</span>
+        </a>
     </div>
+
 }

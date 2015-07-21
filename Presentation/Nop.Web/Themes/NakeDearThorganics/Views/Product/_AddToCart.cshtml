@@ -3,8 +3,7 @@
 @using Nop.Core.Domain.Orders;
 @if (!Model.DisableBuyButton || Model.CustomerEntersPrice)
 {
-    <div class="prod-row">
-        <div class="cart-top">
+
             <div class="cart-top-padd form-inline">
                 @if (Model.UpdatedShoppingCartItemId > 0)
                 {
@@ -73,7 +72,6 @@
                 @Html.Widget("productdetails_add_info", Model.ProductId)
                 
             </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+
+
 }

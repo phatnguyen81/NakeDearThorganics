@@ -1644,6 +1644,15 @@
     <Content Include="Themes\NakeDearThorganics\Content\images\new.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\next.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\pointer.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Themes\NakeDearThorganics\Content\images\prettyPhoto\light_rounded\sprite.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\prev.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\rating1.png" />
     <Content Include="Themes\NakeDearThorganics\Content\images\rating2.png" />
@@ -2277,6 +2286,7 @@
     <Content Include="Themes\NakeDearThorganics\Views\Shared\OldInternetExplorerWarning.cshtml" />
     <Content Include="Themes\NakeDearThorganics\Views\Shared\_SwipeMenu.cshtml" />
     <Content Include="Themes\NakeDearThorganics\Views\Shared\_ProductBoxGridLine.cshtml" />
+    <Content Include="Themes\NakeDearThorganics\Views\Shared\_ProductRelatedBox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

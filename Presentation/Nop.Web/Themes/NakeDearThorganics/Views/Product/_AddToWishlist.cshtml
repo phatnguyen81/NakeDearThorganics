@@ -3,7 +3,11 @@
 @using Nop.Core.Domain.Orders;
 @if (!Model.DisableWishlistButton && Model.UpdatedShoppingCartItemId == 0)
 {
-    <div class="add-to-wishlist">
-        <input type="button" id="add-to-wishlist-button-@Model.ProductId" class="button-2 add-to-wishlist-button" value="@T("ShoppingCart.AddToWishlist")" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })', '#product-details-form');return false;" />
+    
+    <div class="wishlist">
+        <a id="add-to-wishlist-button-@Model.ProductId"  class="tooltip-1" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })', '#product-details-form');return false;" title="@T("ShoppingCart.AddToWishlist")">
+            <i class="icon-star"></i><span>@T("ShoppingCart.AddToWishlist")</span>
+        </a>
     </div>
+
 }

@@ -1,0 +1,93 @@
+﻿@model ProductOverviewModel
+@using Nop.Core
+@using Nop.Core.Domain.Orders
+@using Nop.Core.Domain.Tax
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Catalog;
+@{
+    //prepare "Add to cart" AJAX link
+    string addtocartlink = "";
+    var shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart;
+    var quantity = 1;
+    if (Model.ProductPrice.ForceRedirectionAfterAddingToCart)
+    {
+        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = Model.ProductPrice.ForceRedirectionAfterAddingToCart });
+    }
+    else
+    {
+        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity });
+    }
+
+    var addtowishlistlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist, quantity = quantity });
+    var addtocomparelink = Url.RouteUrl("AddProductToCompare", new { productId = Model.Id });
+}
+<div data-productid="@Model.Id">
+    <div class="image">
+        <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })" title="@Model.DefaultPictureModel.Title">
+            <img alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" />
+        </a>
+    </div>
+
+    <script type="text/javascript">
+        if ($('.container').width() > 723) {
+            (function ($) { $.fn.equalHeights = function (minHeight, maxHeight) { tallest = (minHeight) ? minHeight : 0; this.each(function () { if ($(this).height() > tallest) { tallest = $(this).height() } }); if ((maxHeight) && tallest > maxHeight) tallest = maxHeight; return this.each(function () { $(this).height(tallest) }) } })(jQuery)
+            $(window).load(function () {
+                if ($(".maxheight-rel").length) {
+                    $(".maxheight-rel").equalHeights()
+                }
+            });
+        };
+    </script>		
+    <div class="inner">
+            <div class="name maxheight-feat">
+                <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })">@Model.Name</a>
+            </div>
+            <div class="price">
+                @if (!String.IsNullOrEmpty(Model.ProductPrice.OldPrice))
+                {
+                    <span class="price-old">@Model.ProductPrice.OldPrice</span>
+                }
+                <span class="price price-new">@Model.ProductPrice.Price</span>
+                @if (Model.ProductPrice.DisplayTaxShippingInfo)
+                {
+                    var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == TaxDisplayType.IncludingTax;
+                    //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
+                    //of course, you can modify appropriate locales to include VAT info there
+                    <span class="tax-shipping-info">
+                        @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+                    </span>
+                }
+            </div>
+        <div class="cart-button">
+            @*<div class="cart"><a title="Add to cart" data-id="45;" class="button addToCart"><span>Add to cart</span></a></div>*@
+            @if (!Model.ProductPrice.DisableBuyButton)
+            {
+                var addToCartText = T("ShoppingCart.AddToCart").Text;
+                if (Model.ProductPrice.IsRental)
+                {
+                    addToCartText = T("ShoppingCart.Rent").Text;
+                }
+                if (Model.ProductPrice.AvailableForPreOrder)
+                {
+                    addToCartText = T("ShoppingCart.PreOrder").Text;
+                }
+                <div class="cart">
+                    <a title="@(addToCartText)" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink'); return false;" class="button tooltip-2">
+                        <i class="icon-shopping-cart"></i>
+                        <span>@(addToCartText)</span>
+                    </a>
+                </div>
+                <div class="wishlist">
+                    <a class="tooltip-2" title="Add to Wish List" onclick="addToWishList('31');"><i class="icon-star"></i><span>Add to Wish List</span></a>
+                </div>
+                <div class="compare">
+                    <a class="tooltip-2" title="Add to Compare" onclick="addToCompare('31');"><i class="icon-bar-chart"></i><span>Add to Compare</span></a>
+                </div>
+
+            }
+            <span class="clear"></span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    </div>
