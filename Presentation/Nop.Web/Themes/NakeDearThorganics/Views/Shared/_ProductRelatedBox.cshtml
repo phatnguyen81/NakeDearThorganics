@@ -62,7 +62,7 @@
             @*<div class="cart"><a title="Add to cart" data-id="45;" class="button addToCart"><span>Add to cart</span></a></div>*@
             @if (!Model.ProductPrice.DisableBuyButton)
             {
-                var addToCartText = T("ShoppingCart.AddToCart").Text;
+                @*var addToCartText = T("ShoppingCart.AddToCart").Text;
                 if (Model.ProductPrice.IsRental)
                 {
                     addToCartText = T("ShoppingCart.Rent").Text;
@@ -78,11 +78,11 @@
                     </a>
                 </div>
                 <div class="wishlist">
-                    <a class="tooltip-2" title="Add to Wish List" onclick="addToWishList('31');"><i class="icon-star"></i><span>Add to Wish List</span></a>
+                    <a class="tooltip-2" title="@T("ShoppingCart.AddToWishlist")" data-productid="@Model.Id" onclick=" ajaxcart.addproducttocart_details('@Url.RouteUrl("addproducttocart-details", new { productid = Model.Id, shoppingcarttypeid = (int)ShoppingCartType.Wishlist})', '#product-details-form' );return false;"><i class="icon-star"></i><span>@T("ShoppingCart.AddToWishlist")"</span></a>
                 </div>
                 <div class="compare">
                     <a class="tooltip-2" title="Add to Compare" onclick="addToCompare('31');"><i class="icon-bar-chart"></i><span>Add to Compare</span></a>
-                </div>
+                </div>*@
 
             }
             <span class="clear"></span>
