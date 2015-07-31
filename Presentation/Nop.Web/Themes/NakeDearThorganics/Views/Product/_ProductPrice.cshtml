@@ -59,7 +59,7 @@
                 <label>@T("Products.Price"):</label>
             }
             @*render price*@
-            <span @if (String.IsNullOrWhiteSpace(Model.PriceWithDiscount)) { <text> itemprop="price" class="price-value-@(Model.ProductId)" </text>  }>
+            <span @if (String.IsNullOrWhiteSpace(Model.PriceWithDiscount)) { <text> itemprop="price" class="price-new price-value-@(Model.ProductId)" </text>  }>
                 @if (dynamicPriceUpdateSupported && !Model.HidePrices && String.IsNullOrWhiteSpace(Model.PriceWithDiscount))
                 {
                     @Html.Raw(Regex.Replace(Model.Price, dynamicPricePattern, dynamicPriceReplacement))
@@ -75,7 +75,7 @@
             @*discounted price*@
             <div class="product-price discounted-price">
                 <label>@T("Products.Price.WithDiscount"):</label>
-                <span itemprop="price" class="price-value-@(Model.ProductId)">
+                <span itemprop="price" class="price-new price-value-@(Model.ProductId)">
                     @if (dynamicPriceUpdateSupported && !Model.HidePrices)
                     {
                         @Html.Raw(Regex.Replace(Model.PriceWithDiscount, dynamicPricePattern, dynamicPriceReplacement))

@@ -2217,7 +2217,7 @@ a#compare-total:hover{
 	font-weight:normal;
 	text-transform:uppercase;
 	line-height:24px;
-	margin-bottom:20px;
+	padding-bottom:20px;
     border-bottom:1px solid #d8d8d8;
 	}
 .product-info .description .product-section a{
@@ -3843,4 +3843,69 @@ select[name='DateOfBirthDay'],select[name='DateOfBirthMonth'],select[name='DateO
 	width: 280px;
 	text-align: center;
 	color: #444;
+}
+
+.product-filter {
+	vertical-align: top;
+	text-align: left;
+}
+.product-filter.price-range-filter {
+	width: 200px;
+}
+.product-filter .product-spec-group {
+	float: left;
+	margin: 0 25px 10px 0;
+}
+.product-filter .group li.item {
+	display: block;
+	margin: 0;
+}
+.product-filter .group {
+	margin: 0 0 10px;
+}
+.product-filter .group li {
+	font-size: 15px;
+}
+.product-filter .group li a,
+.product-filter .group li strong {
+	display: inline-block;
+	padding: 5px 0;
+}
+.product-filter .group li a:hover {
+	color: #4ab2f1;
+}
+.product-filter .group li.item {
+	/*display: inline-block;*/
+	position: relative;
+	margin: 0 15px 0 0;
+	padding: 0 0 0 15px;
+
+}
+.product-filter .group li.item a {
+            color: #333;
+}
+.product-filter .group li.item:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 0;
+	width: 5px;
+	height: 5px;
+	background-color: #ddd;
+}
+.filtered-items .title {
+    margin: 0 0 5px;
+    font-style: italic;
+}
+
+.product-spec-filter {
+	border-width:0 0 1px 0;
+	margin-top:0px;
+}
+.product-share-button {
+    margin-bottom: 20px;
+}
+
+.attribute-data .text-prompt,.attribute-data .option-list label{
+    display: initial;
 }
