@@ -1,17 +1,56 @@
 ﻿@model IList<ProductOverviewModel>
 
 @using Nop.Web.Models.Catalog;
+
+
+
 @if (Model.Count > 0)
 {
-    <div class="product-grid bestsellers">
-        <div class="title">
-            <strong>@T("Bestsellers")</strong>
-        </div>
-        <div class="item-grid">
+    <script>
+        jQuery(function () {
+            jQuery('#camera_wrap_0').camera({
+                navigation: true,
+                playPause: false,
+                thumbnails: false,
+                navigationHover: false,
+                barPosition: 'top',
+                loader: false,
+                time: 3000,
+                transPeriod: 800,
+                alignment: 'center',
+                autoAdvance: true,
+                mobileAutoAdvance: true,
+                barDirection: 'leftToRight',
+                barPosition: 'bottom',
+                easing: 'easeInOutExpo',
+                fx: 'simpleFade',
+                height: '32.68%',
+                minHeight: '242px',
+                hover: true,
+                pagination: true,
+                loaderColor: '#8abfa1',
+                loaderBgColor: 'transparent',
+                loaderOpacity: 1,
+                loaderPadding: 0,
+                loaderStroke: 3
+            });
+        });
+    </script>
+    <div class="fluid_container">
+        <div id="camera_wrap_0">
             @foreach (var item in Model)
             {
                 <div class="item-box">
                     @Html.Partial("_ProductBox", item)
+                </div>
+
+                <div title="slide-1" data-thumb="@item.DefaultPictureModel.ImageUrl">
+                    <div class="camera_caption fadeIn">
+                        <h1>@item.Name</h1>
+                        <p>@item.ShortDescription</p>
+
+                        <a href="@Url.RouteUrl("Product", new {SeName = item.SeName})" title="@item.DefaultPictureModel.Title">Shop now!</a>
+                    </div>
                 </div>
             }
         </div>

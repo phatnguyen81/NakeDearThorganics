@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+}
+@if (IsSectionDefined("Breadcrumb"))
+{
+    @section Breadcrumb {
+        @RenderSection("Breadcrumb")
+    }
+}
+
+<div class="clear"></div>
+<div id="container">
+    @Html.Widget("main_column_before")
+    <p id="back-top"> <a href="#top"><span></span></a> </p>
+    @RenderBody()
+    @Html.Widget("main_column_after")
+</div>

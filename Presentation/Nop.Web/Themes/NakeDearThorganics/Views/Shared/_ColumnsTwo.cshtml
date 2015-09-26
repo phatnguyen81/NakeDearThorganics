@@ -1,4 +1,12 @@
-﻿@{
+﻿@using Microsoft.Ajax.Utilities
+@using Nop.Core
+@using Nop.Core.Caching
+@using Nop.Services.Localization
+@using Nop.Services.Seo
+@using Nop.Services.Topics
+@using Nop.Web.Infrastructure.Cache
+@using Nop.Web.Models.Common
+@{
     Layout = "~/Views/Shared/_Root.cshtml";
 }
 @{
@@ -27,6 +35,29 @@
     {
         currentProductId = Convert.ToInt32(Url.RequestContext.RouteData.Values["productId"].ToString());
     }
+
+    var topicService = DependencyResolver.Current.GetService<ITopicService>();
+    var cacheManager = DependencyResolver.Current.GetService<ICacheManager>();
+    var storeContext = DependencyResolver.Current.GetService<IStoreContext>();
+    string topicCacheKey = string.Format(ModelCacheEventConsumer.TOPIC_FOOTER_MODEL_KEY,
+              WorkContext.WorkingLanguage.Id, storeContext.CurrentStore.Id);
+    var cachedTopicModel = cacheManager.Get(topicCacheKey, () =>
+        topicService.GetAllTopics(storeContext.CurrentStore.Id)
+        .Where(t => t.IncludeInFooterColumn1 || t.IncludeInFooterColumn2 || t.IncludeInFooterColumn3)
+        .Select(t => new FooterModel.FooterTopicModel
+        {
+            Id = t.Id,
+            Name = t.GetLocalized(x => x.Title),
+            SeName = t.GetSeName(),
+            IncludeInFooterColumn1 = t.IncludeInFooterColumn1,
+            IncludeInFooterColumn2 = t.IncludeInFooterColumn2,
+            IncludeInFooterColumn3 = t.IncludeInFooterColumn3
+        })
+        .ToList()
+    );
+
+    var commonSettings = DependencyResolver.Current.GetService<Nop.Core.Domain.Common.CommonSettings>();
+    var sitemapEnable = commonSettings.SitemapEnabled;
 }
 
 
@@ -44,6 +75,35 @@
                     </div>
                 </div>
             </div>
+            <aside class="span3" id="column-right">
+                @if (IsSectionDefined("left"))
+                {
+                    @RenderSection("left")
+                }
+                else
+                {
+                    @Html.Widget("left_side_column_before")
+                    <div class="box info">
+                        <div class="box-heading">@T("Footer.Information")</div>
+                        <div class="box-content">
+
+                            <ul class="info-list">
+                                @if (sitemapEnable)
+                                {
+                                    <li><a href="@Url.RouteUrl("Sitemap")">@T("Sitemap")</a></li>
+                                }
+                                @foreach (var topic in cachedTopicModel.Where(x => x.IncludeInFooterColumn1).ToList())
+                                {
+                                    <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>
+                                }
+                                <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    @Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 180 })
+                    @Html.Widget("left_side_column_after")
+                }
+            </aside>
         </div>
     </div>
 </div>

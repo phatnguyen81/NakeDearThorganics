@@ -415,7 +415,7 @@ namespace Nop.Web.Controllers
 
         //footer
         [ChildActionOnly]
-        public ActionResult Footer()
+        public ActionResult  Footer()
         {
             //footer topics
             string topicCacheKey = string.Format(ModelCacheEventConsumer.TOPIC_FOOTER_MODEL_KEY,
