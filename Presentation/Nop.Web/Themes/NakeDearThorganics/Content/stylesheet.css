@@ -2271,7 +2271,7 @@ a#compare-total:hover{
 	padding-top:10px;
 	display:block;
 	}
-.tab-content ul{
+.step-titlecontent ul{
 	margin-left:25px;
 	margin-bottom:20px;
 	list-style-type:disc
@@ -4446,14 +4446,13 @@ select[name='DateOfBirthDay'],select[name='DateOfBirthMonth'],select[name='DateO
 .order-completed .details a:hover {
 	text-decoration: underline;
 }
-
 .opc .step-title {
 	margin: 0 0 1px;
 	overflow: hidden;
-	background-color: #f6f6f6;
+	/*background-color: #f6f6f6;*/
 }
 .opc .allow .step-title {
-	background-color: #4ab2f1;
+	/*background-color: #4ab2f1;*/
 	cursor: pointer;
 }
 .opc .step-title .number,
@@ -4481,7 +4480,7 @@ select[name='DateOfBirthDay'],select[name='DateOfBirthMonth'],select[name='DateO
 .opc .step {
 	margin: 10px 0;
 	padding: 30px 15px;
-	text-align: center;
+	/*text-align: center;*/
 }
 .opc .section {
 	margin: 0 0 30px;

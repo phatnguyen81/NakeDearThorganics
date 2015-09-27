@@ -1685,6 +1685,7 @@
     <Content Include="Themes\NakeDearThorganics\Content\jquery.bxslider.css" />
     <Content Include="Themes\NakeDearThorganics\Content\jquery.prettyPhoto.css" />
     <Content Include="Themes\NakeDearThorganics\Content\livesearch.css" />
+    <Content Include="Themes\NakeDearThorganics\Content\oldstyle.css" />
     <Content Include="Themes\NakeDearThorganics\Content\photoswipe.css" />
     <Content Include="Themes\NakeDearThorganics\Content\responsive.css" />
     <Content Include="Themes\NakeDearThorganics\Content\slideshow.css" />

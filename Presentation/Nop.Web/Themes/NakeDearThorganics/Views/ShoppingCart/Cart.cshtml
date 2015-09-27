@@ -2,7 +2,7 @@
 @using Nop.Web.Models.Checkout
 @using Nop.Web.Models.ShoppingCart;
 @{
-    Layout = "~/Views/Shared/_ColumnsOneCart.cshtml";
+    Layout = "~/Views/Shared/_ColumnsOneSub.cshtml";
 
     //title
     Html.AddTitleParts(T("PageTitle.ShoppingCart").Text);
@@ -11,11 +11,15 @@
 {
     @Html.Action("CheckoutProgress", "Checkout", new {step = CheckoutProgressStep.Cart})
 }
-<div class="page shopping-cart-page">
-    <div class="page-title">
-        <h1>@T("ShoppingCart")</h1>
-    </div>
-    <div class="page-body">
-        @Html.Partial("OrderSummary", Model)
+<div class="container page shopping-cart-page">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                <div class="span12" id="content">
+                    <h1>@T("ShoppingCart")</h1>
+                    @Html.Partial("OrderSummary", Model)
+                </div>
+            </div>
+        </div>
     </div>
 </div>
