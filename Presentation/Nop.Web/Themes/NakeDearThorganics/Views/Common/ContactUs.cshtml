@@ -1,18 +1,29 @@
 ﻿@model ContactUsModel
 @using Nop.Web.Models.Common;
 @{
-    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
 
     //title
     Html.AddTitleParts(T("PageTitle.ContactUs").Text);
 }
-<div class="page contact-page">
-    <div class="page-title">
-        <h1>@T("PageTitle.ContactUs")</h1>
+
+
+<h1>@T("PageTitle.ContactUs")</h1>
+
+    @Html.Widget("contactus_top")
+<div class="contact-info">
+    <div class="content row-fluid">
+        <div class="map-left span6">
+            @Html.Action("TopicBlock", "Topic", new { systemName = "ContactUs" })
+        </div>
+        <div class="map-content span6">
+            <figure>
+                <iframe width="100%" height="200px" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+            </figure>
+        </div>
     </div>
-    <div class="page-body">
-        @Html.Action("TopicBlock", "Topic", new { systemName = "ContactUs" })
-        @Html.Widget("contactus_top")
+</div>
+    <div class="content contact-f form-horizontal">
         @if (Model.SuccessfullySent)
         {
             <div class="result">
@@ -21,22 +32,64 @@
         }
         else
         {
-            using (Html.BeginForm())
+            using (Html.BeginForm(null,null,FormMethod.Post,new {id="contact"}))
             {
                 var validationSummary = Html.ValidationSummary(true);
                 if (!MvcHtmlString.IsNullOrEmpty(validationSummary))
                 {
-                    <div class="message-error">@validationSummary</div> 
+                    <div class="message-error">@validationSummary</div>
                 }
+                <div class="control-group">
+                    @Html.LabelFor(model => model.FullName, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.TextBoxFor(model => model.FullName, new { @class = "span5", placeholder = T("ContactUs.FullName.Hint") })
+                        @Html.ValidationMessageFor(model => model.FullName)
+                    </div>
+                </div>
+                <div class="control-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "span5", placeholder = T("ContactUs.Email.Hint") })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+                 if (Model.SubjectEnabled)
+                 {
+                     <div class="control-group">
+                         @Html.LabelFor(model => model.Subject, new {@class = "control-label"})
+                         <div class="controls">
+                             @Html.TextBoxFor(model => model.Subject, new {@class = "span5", placeholder = T("ContactUs.Subject.Hint")})
+                             @Html.ValidationMessageFor(model => model.Subject)
+                         </div>
+                     </div>
+                 }
+                <div class="control-group">
+                    @Html.LabelFor(model => model.Enquiry, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.TextAreaFor(model => model.Enquiry, new { @class = "span5", placeholder = T("ContactUs.Enquiry.Hint"), rows = "10", cols ="40"})
+                        @Html.ValidationMessageFor(model => model.Enquiry)
+                    </div>
+                </div>
+                <div class="controls">
+                    @if (Model.DisplayCaptcha)
+                    {
+                        <div class="captcha-box">
+                            @Html.Raw(Html.GenerateCaptcha())
+                        </div>
+                    }
+                    <a onclick="$('#contact').submit();" class="button"><span>@T("ContactUs.Button")</span></a>
+                    
+                </div>
+                        @*</div>
                 <div class="fieldset">
                     <div class="form-fields">
                         <div class="inputs">
-                            @Html.LabelFor(model => model.FullName)
-                            @Html.TextBoxFor(model => model.FullName, new { @class = "fullname", placeholder = T("ContactUs.FullName.Hint") })
-                            @Html.ValidationMessageFor(model => model.FullName)
+                            
+                            
+                            
                         </div>
                         <div class="inputs">
-                            @Html.LabelFor(model => model.Email)
+                            
                             @Html.TextBoxFor(model => model.Email, new { @class = "email", placeholder = T("ContactUs.Email.Hint") })
                             @Html.ValidationMessageFor(model => model.Email)
                         </div>
@@ -63,9 +116,11 @@
                 </div>
                 <div class="buttons">
                     <input type="submit" name="send-email" class="button-1 contact-us-button" value="@T("ContactUs.Button")" />
-                </div>
+                </div>*@
             }
         }
-        @Html.Widget("contactus_bottom")
     </div>
-</div>
+    @Html.Widget("contactus_bottom")
+
+
+
