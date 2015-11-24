@@ -10,10 +10,11 @@
         @Html.Action("HomepageProducts", "Product")
         
         <aside class="span3" id="column-right">
-            @Html.Action("HomepageBestSellers", "Product")
+            @*@Html.Action("HomepageBestSellers", "Product")*@
+            @Html.Widget("home_page_custom_best_seller")
             <div id="banner0" class="banner row">
                 <div class="span4">
-                    <a href="index.php?route=product/product&amp;product_id=32">
+                    <a href="#">
                         <img src="http://livedemo00.template-help.com/opencart_47280/image/cache/data/banner-270x175.jpg" alt="banner-1" title="banner-1" />
                         <div class="s-desc">
                             on orders over $99.

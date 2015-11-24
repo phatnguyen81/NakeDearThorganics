@@ -105,6 +105,7 @@
                          }
                         <div class="login-buttons">
                             <a onclick="$('#login').submit()" class="button-cont-right">@T("Account.Login.LoginButton")<i class="icon-circle-arrow-right"></i></a>
+                            <button style="display: none"></button>
                             @Html.RouteLink(T("Account.Login.ForgotPassword").Text, "PasswordRecovery",null, new { @class = "link-login" })
                         </div>
                     </div>

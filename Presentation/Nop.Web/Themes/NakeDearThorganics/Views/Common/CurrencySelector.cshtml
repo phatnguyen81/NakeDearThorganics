@@ -1,8 +1,63 @@
 ﻿@model CurrencySelectorModel
+@using System.Globalization
 @using Nop.Web.Models.Common;
 @using Nop.Core;
 @using Nop.Core.Infrastructure;
+@functions
+{
+
+    private string TryGetCurrencySymbol(string ISOCurrencySymbol)
+    {
+        if (ISOCurrencySymbol.Length < 3) return ISOCurrencySymbol;
+        var symbol = CultureInfo
+            .GetCultures(CultureTypes.AllCultures)
+            .Where(c => !c.IsNeutralCulture)
+            .Select(culture =>
+            {
+                try
+                {
+                    return new RegionInfo(culture.LCID);
+                }
+                catch
+                {
+                    return null;
+                }
+            })
+            .Where(ri => ri != null && ri.ISOCurrencySymbol == ISOCurrencySymbol)
+            .Select(ri => ri.CurrencySymbol)
+            .FirstOrDefault();
+        return symbol;
+    }
+
+}
 @if (Model.AvailableCurrencies.Count > 1)
+{
+    var webHelper = EngineContext.Current.Resolve<IWebHelper>();
+    var currentCurrency = Model.AvailableCurrencies.FirstOrDefault(q => q.Id == Model.CurrentCurrencyId);
+
+    <div id="currency" class="header-button">
+        <div>
+            <div class="heading-1"><i class="icon-money"></i>Currency<i class="icon-angle-down"></i></div>
+            <div class="heading">
+                @TryGetCurrencySymbol(currentCurrency.CurrencySymbol)<i class="icon-angle-down"></i>
+            </div>
+        </div>
+        <ul>
+        @foreach (var item in Model.AvailableCurrencies)
+        {
+            if (!item.Id.Equals(Model.CurrentCurrencyId))
+            {
+                <li><a title="@item.Name" onclick="setLocation('@webHelper.ModifyQueryString(Url.RouteUrl("ChangeCurrency", new { customercurrency = item.Id }), "returnurl=" + HttpUtility.UrlEncode(HttpContext.Current.Request.RawUrl), null)')"><span>@TryGetCurrencySymbol(item.CurrencySymbol)</span></a></li>
+            }
+            else
+            {
+                <li><a title="@item.Name"><span class="act">@TryGetCurrencySymbol(item.CurrencySymbol)</span></a></li>
+            }
+        }
+        </ul>
+    </div>
+}
+@*@if (Model.AvailableCurrencies.Count > 1)
 {
     <div id="currency" class="header-button">
         @{
@@ -18,4 +73,4 @@
         @Html.DropDownList("customerCurrency", currencies, new { onchange = "setLocation(this.value);" })
         }
     </div>
-}
+}*@

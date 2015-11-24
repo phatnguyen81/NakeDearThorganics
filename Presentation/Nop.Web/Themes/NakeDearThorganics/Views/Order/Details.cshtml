@@ -1,9 +1,11 @@
 @model OrderDetailsModel
+@using Nop.Web.Models.Customer
 @using Nop.Web.Models.Order
+@using Nop.Core;
 @{
    if (!Model.PrintMode)
    {
-       Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+       Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
    }
    else
    {
@@ -19,6 +21,14 @@
            window.print();
        });
    </script>
+}
+@if (!Model.PrintMode)
+{ 
+<text>
+@section left{
+    @Html.Action("CustomerNavigation", "Customer", new { selectedTabId = CustomerNavigationEnum.Orders })
+}
+</text>
 }
 <div class="page order-details-page">
    @if (!Model.PrintMode)

@@ -88,15 +88,10 @@
                         <div class="box-content">
 
                             <ul class="info-list">
-                                @if (sitemapEnable)
-                                {
-                                    <li><a href="@Url.RouteUrl("Sitemap")">@T("Sitemap")</a></li>
-                                }
                                 @foreach (var topic in cachedTopicModel.Where(x => x.IncludeInFooterColumn1).ToList())
                                 {
                                     <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>
                                 }
-                                <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
                             </ul>
                         </div>
                     </div>

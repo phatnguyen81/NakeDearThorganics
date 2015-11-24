@@ -1,0 +1,8 @@
+﻿Group: Widgets
+FriendlyName: Custom Best Seller
+SystemName: Widgets.CustomBestSeller
+Version: 1.09
+SupportedVersions: 3.60
+Author: nopCommerce team
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.CustomBestSeller.dll

@@ -26,3 +26,4 @@ Widgets.GoogleAnalytics
 Widgets.NivoSlider
 Widgets.Camera
 Payments.PayPalExpressCheckout
+Widgets.CustomBestSeller

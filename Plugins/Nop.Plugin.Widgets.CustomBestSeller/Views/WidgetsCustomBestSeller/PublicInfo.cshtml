@@ -1,0 +1,54 @@
+﻿@using Nop.Web.Framework.UI
+@model IEnumerable<Nop.Plugin.Widgets.CustomBestSeller.Models.ProductOverviewModel>
+@{
+    Layout = "";
+
+    Html.AddScriptParts("~/Plugins/Widgets.Camera/Scripts/camera.js");
+    Html.AddCssFileParts("~/Plugins/Widgets.Camera/Content/camera/camera.css");
+}
+<div class="fluid_container aside-slider">
+    <div id="camera_wrap_0">
+        @foreach (var item in Model)
+        {
+            <div title="@item.Name" data-thumb="@item.DefaultPictureModel.FullSizeImageUrl" data-link="@Url.RouteUrl("Product", new {SeName = item.SeName})" data-src="@item.DefaultPictureModel.FullSizeImageUrl">
+                <div class="camera_caption fadeIn">
+                    <h1>@item.Name</h1>
+                    <p>@item.ShortDescription</p>
+                    <a href="@Url.RouteUrl("Product", new {SeName = item.SeName})">View Detail</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+
+    jQuery(function () {
+        jQuery('#camera_wrap_0').camera({
+            navigation: true,
+            playPause: false,
+            thumbnails: false,
+            navigationHover: false,
+            barPosition: 'top',
+            loader: false,
+            time: 3000,
+            transPeriod: 800,
+            alignment: 'center',
+            autoAdvance: true,
+            mobileAutoAdvance: true,
+            barDirection: 'leftToRight',
+            barPosition: 'bottom',
+            easing: 'easeInOutExpo',
+            fx: 'simpleFade',
+            height: '32.68%',
+            minHeight: '242px',
+            hover: true,
+            pagination: true,
+            loaderColor: '#8abfa1',
+            loaderBgColor: 'transparent',
+            loaderOpacity: 1,
+            loaderPadding: 0,
+            loaderStroke: 3
+        });
+    });
+</script>
